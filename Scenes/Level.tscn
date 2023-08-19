@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="1_tdowx"]
 [ext_resource type="Script" path="res://Scripts/Camera.gd" id="4_6wvhx"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="4_gk0ah"]
-[ext_resource type="PackedScene" uid="uid://b0ww3e5x7xm8d" path="res://Objects/Door.tscn" id="5_hsegn"]
+[ext_resource type="PackedScene" path="res://Objects/Door.tscn" id="5_hsegn"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="5_nq42l"]
-[ext_resource type="PackedScene" uid="uid://cnq0cu8t4e7ww" path="res://Objects/Box.tscn" id="8_48acx"]
+[ext_resource type="PackedScene" path="res://Objects/Box.tscn" id="8_48acx"]
 
 [sub_resource type="Environment" id="Environment_gyeoi"]
 background_mode = 1
