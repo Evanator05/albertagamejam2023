@@ -24,7 +24,7 @@ func _ready():
 	await get_tree().process_frame #wait until the next frame to start the path
 	getNextPoint()
 
-func _process(delta):
+func _process(_delta):
 	setTarget(patrolPath[currentPoint])
 	
 	var moveDir:Vector3 = nextPoint-global_transform.origin
