@@ -158,9 +158,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
 
 [node name="Button" parent="MultiButton" instance=ExtResource("3_8dvch")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.6958, 0, 1.95291)
+timerLength = 3.0
 
 [node name="Button2" parent="MultiButton" instance=ExtResource("3_8dvch")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.6958, 0, 1.95291)
+timerLength = 3.0
 
 [node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_aeu2q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, -25.1524)
@@ -174,9 +176,11 @@ track = NodePath("../Player")
 
 [node name="Button2" parent="MultiButton2" instance=ExtResource("3_8dvch")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.30418, 0, 4.95291)
+timerLength = 3.0
 
 [node name="Button3" parent="MultiButton2" instance=ExtResource("3_8dvch")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.30418, 0, 6.95291)
+timerLength = 3.0
 
 [node name="Enemy" parent="." node_paths=PackedStringArray("target", "patrolPath") instance=ExtResource("6_gh4we")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
