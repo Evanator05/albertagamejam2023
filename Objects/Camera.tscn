@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccoersjsjhk7s"]
+
+[ext_resource type="Script" path="res://Scripts/Camera.gd" id="1_mwfnv"]
+
+[node name="Camera3D" type="Camera3D" node_paths=PackedStringArray("track")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 10, 0)
+current = true
+script = ExtResource("1_mwfnv")
+track = NodePath("")
+offset = Vector3(0, 10, 0)
