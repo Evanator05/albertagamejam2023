@@ -25,4 +25,7 @@ path_height_offset = 1.0
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 light_color = Color(1, 0, 0, 1)
-light_energy = 7.265
+light_energy = 16.0
+spot_range = 10.0
+spot_attenuation = 0.0044871
+spot_angle_attenuation = 0.0037732

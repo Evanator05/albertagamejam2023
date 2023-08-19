@@ -26,7 +26,9 @@ func _ready():
 
 func _process(delta):
 	setTarget(patrolPath[currentPoint])
+	
 	var moveDir:Vector3 = nextPoint-global_transform.origin
+	rotation.y = getAngle(moveDir)
 	if moveDir.length() < 1: #if the distence to the current point is less than 1 get the next point
 		if navAgent.distance_to_target() < 1:
 			currentPoint += 1
@@ -42,3 +44,10 @@ func setTarget(t:Node3D):
 
 func getNextPoint():
 	nextPoint = navAgent.get_next_path_position()
+
+func getAngle(dir):
+	var dir2D = Vector2(dir.x, dir.z)
+	var angle = -dir2D.angle()
+	angle -= PI/2
+	return angle
+	
