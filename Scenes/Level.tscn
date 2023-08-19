@@ -26,7 +26,7 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Arr
 agent_radius = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s14ge"]
-size = Vector3(90, 1, 50)
+size = Vector3(180, 1, 108)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bg5pw"]
 albedo_texture = ExtResource("9_88ykb")
@@ -101,6 +101,7 @@ timerLength = 5.0
 [node name="OrderedButton" type="Node3D" parent="."]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)

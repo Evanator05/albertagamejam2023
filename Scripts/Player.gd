@@ -31,7 +31,10 @@ func die():
 	state = dead
 
 func getAngle(dir):
+	var pos = global_transform.origin
+	var pos2D = Vector2(pos.x, pos.z)
 	var dir2D = Vector2(dir.x, dir.z)
+	dir2D = dir2D-pos2D
 	var angle = -dir2D.angle()
 	angle -= PI/2
 	return angle
