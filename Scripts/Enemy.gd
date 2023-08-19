@@ -24,11 +24,11 @@ func _ready():
 	await get_tree().process_frame #wait until the next frame to start the path
 	getNextPoint()
 
-func _process(_delta):
+func _process(delta):
 	setTarget(patrolPath[currentPoint])
 	
 	var moveDir:Vector3 = nextPoint-global_transform.origin
-	rotation.y = getAngle(moveDir)
+	rotation.y = lerp_angle(rotation.y, getAngle(moveDir), 1-pow(0.002, delta))
 	if moveDir.length() < 1: #if the distence to the current point is less than 1 get the next point
 		if navAgent.distance_to_target() < 1:
 			currentPoint += 1

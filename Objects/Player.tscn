@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpikd35h2mjce"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_7jwfk"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6cjka"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dsasl"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_legjo"]
+material = SubResource("StandardMaterial3D_dsasl")
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_7jwfk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_6cjka")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_legjo")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+shadow_enabled = true
+
+[node name="Raycasts" type="Node3D" parent="."]
+top_level = true
+
+[node name="RayCast3D" type="RayCast3D" parent="Raycasts"]
+target_position = Vector3(10, 0, 0)
+
+[node name="RayCast3D2" type="RayCast3D" parent="Raycasts"]
+target_position = Vector3(-10, 0, 0)
+
+[node name="RayCast3D3" type="RayCast3D" parent="Raycasts"]
+target_position = Vector3(0, 0, 10)
+
+[node name="RayCast3D4" type="RayCast3D" parent="Raycasts"]
+target_position = Vector3(0, 0, -10)
