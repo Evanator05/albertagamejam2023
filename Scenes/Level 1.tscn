@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dy113xuu4ucfy"]
+[gd_scene load_steps=6 format=3 uid="uid://br5fsir3he21m"]
 
-[ext_resource type="PackedScene" path="res://Objects/Door.tscn" id="1_7ieoh"]
+[ext_resource type="PackedScene" uid="uid://b0ww3e5x7xm8d" path="res://Objects/Door.tscn" id="1_7ieoh"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_dn6g6"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_rh07f"]
 [ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="4_o6sbw"]
-[ext_resource type="PackedScene" path="res://Objects/Camera.tscn" id="5_c3g07"]
+[ext_resource type="PackedScene" uid="uid://ccoersjsjhk7s" path="res://Objects/Camera.tscn" id="5_c3g07"]
 
 [node name="Level 2" type="Node3D"]
 
