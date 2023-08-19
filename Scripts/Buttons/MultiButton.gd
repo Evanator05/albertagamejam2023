@@ -1,6 +1,7 @@
-extends Node3D
+class_name ButtonManager extends Node3D
 
 signal opened()
+signal closed()
 
 func _ready():
 	for child in get_children():
@@ -9,9 +10,8 @@ func _ready():
 
 func stateUpdated(state):
 	for child in get_children():
-		if not child.isPressed: 
-			
+		if not child.isPressed:
+			emit_signal("closed")
 			return false
-
 	emit_signal("opened")
 	return true
