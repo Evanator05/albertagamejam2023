@@ -1,14 +1,15 @@
-[gd_scene load_steps=16 format=3 uid="uid://cu6yi1pxoioyp"]
+[gd_scene load_steps=17 format=3 uid="uid://cu6yi1pxoioyp"]
 
 [ext_resource type="PackedScene" uid="uid://b2av77eexy866" path="res://Objects/Enemy.tscn" id="1_hkow6"]
 [ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="1_tdowx"]
 [ext_resource type="Material" uid="uid://blsyleb4hu5g2" path="res://Materials/concrete.material" id="2_m8iry"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="4_gk0ah"]
-[ext_resource type="PackedScene" uid="uid://ccoersjsjhk7s" path="res://Objects/Camera.tscn" id="5_f3vmu"]
-[ext_resource type="PackedScene" uid="uid://b0ww3e5x7xm8d" path="res://Objects/Door.tscn" id="5_hsegn"]
+[ext_resource type="PackedScene" path="res://Objects/Camera.tscn" id="5_f3vmu"]
+[ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="5_hsegn"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="5_nq42l"]
-[ext_resource type="PackedScene" uid="uid://cnq0cu8t4e7ww" path="res://Objects/Box.tscn" id="8_48acx"]
+[ext_resource type="PackedScene" path="res://Objects/Box.tscn" id="8_48acx"]
 [ext_resource type="Texture2D" uid="uid://c0x103i73yd21" path="res://Textures/Exit Texture ( detailed ).png" id="9_88ykb"]
+[ext_resource type="PackedScene" uid="uid://bn5pu4gcmr0oj" path="res://Objects/Elevator.tscn" id="10_jb8c1"]
 [ext_resource type="Script" path="res://Scenes/UI.gd" id="10_unbmj"]
 
 [sub_resource type="Environment" id="Environment_gyeoi"]
@@ -50,6 +51,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -17)
 flip_faces = true
 size = Vector3(68, 4, 40)
 material = ExtResource("2_m8iry")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 7, -1)
+flip_faces = true
+size = Vector3(2, 19, 2)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -131,3 +137,6 @@ offset_left = 8.0
 offset_top = 328.0
 offset_right = 186.0
 offset_bottom = 641.0
+
+[node name="Elevator" parent="." instance=ExtResource("10_jb8c1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, -2.5, -1)
