@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://cu6yi1pxoioyp"]
+[gd_scene load_steps=12 format=3 uid="uid://cu6yi1pxoioyp"]
 
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_1snx0"]
 [ext_resource type="PackedScene" uid="uid://b2av77eexy866" path="res://Objects/Enemy.tscn" id="1_hkow6"]
 [ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="1_tdowx"]
 [ext_resource type="Script" path="res://Scripts/Camera.gd" id="4_6wvhx"]
@@ -25,7 +26,11 @@ size = Vector3(4, 4, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_idoms"]
 size = Vector3(4, 4, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_s14ge"]
+size = Vector3(90, 1, 50)
+
 [node name="Level" type="Node3D"]
+script = ExtResource("1_1snx0")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_gyeoi")
@@ -119,11 +124,17 @@ mesh = SubResource("BoxMesh_otmqb")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 shape = SubResource("BoxShape3D_idoms")
 
-[node name="Button" parent="." instance=ExtResource("4_gk0ah")]
-
-[node name="Button2" parent="." instance=ExtResource("4_gk0ah")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -1.5, 0)
-
 [node name="MultiButton" parent="." instance=ExtResource("5_nq42l")]
 
+[node name="Button" parent="MultiButton" instance=ExtResource("4_gk0ah")]
+
+[node name="Button2" parent="MultiButton" instance=ExtResource("4_gk0ah")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -1.5, 0)
+
 [node name="OrderedButton" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+shape = SubResource("BoxShape3D_s14ge")

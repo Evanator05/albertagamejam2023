@@ -17,7 +17,9 @@ func alive():
 	interact()
 	var inputs:Vector2 = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
 	if inputs != Vector2.ZERO:
-		rotation.y = getAngle(Vector3(inputs.x,0,inputs.y))
+		var pos = getMousePos()
+		if not pos == null:
+			rotation.y = getAngle(pos)
 	velocity = Vector3(inputs.x, 0, inputs.y)*maxSpeed
 	camera.offset.y = (getRoomSize()/2)+5
 	move_and_slide()
@@ -45,7 +47,23 @@ func interact():
 		for area in $interactionArea.get_overlapping_areas():
 			if area is InteractArea:
 				area.interact(self)
-			
+
+func getMousePos():
+	var mouse_position = get_viewport().get_mouse_position()
+	
+	var ray = PhysicsRayQueryParameters3D.new()
+	ray.from = camera.project_ray_origin(mouse_position)
+	ray.to = ray.from + camera.project_ray_normal(mouse_position) * 2000
+
+	var space_state = get_world_3d().direct_space_state
+	var intersection = space_state.intersect_ray(ray)
+	
+	if not intersection.is_empty():
+		var pos = intersection["position"]
+		var look_at_me = Vector3(pos.x, global_transform.origin.y, pos.z)
+		return look_at_me
+	else:
+		return null
 
 func getRoomSize():
 	$Raycasts.global_transform.origin = global_transform.origin
