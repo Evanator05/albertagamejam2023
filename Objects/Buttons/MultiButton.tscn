@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj7iccj4gx0yh"]
+
+[ext_resource type="Script" path="res://Scripts/Buttons/MultiButton.gd" id="1_jcvfh"]
+
+[node name="MultiButton" type="Node3D"]
+script = ExtResource("1_jcvfh")

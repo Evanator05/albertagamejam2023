@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5jhlu5cuucef"]
+
+[ext_resource type="Script" path="res://Scripts/Buttons/Button.gd" id="1_o0c5n"]
+[ext_resource type="PackedScene" uid="uid://dmjbqog4sawil" path="res://Objects/interactArea.tscn" id="2_2r7cn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s51vm"]
+size = Vector3(1, 2, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_icj5m"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_l4rhc"]
+material = SubResource("StandardMaterial3D_icj5m")
+size = Vector3(1, 2, 1)
+
+[node name="Button" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -1.5, 0)
+script = ExtResource("1_o0c5n")
+
+[node name="interactArea" parent="." instance=ExtResource("2_2r7cn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="interactArea"]
+shape = SubResource("BoxShape3D_s51vm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_l4rhc")

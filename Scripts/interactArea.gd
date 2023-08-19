@@ -1,6 +1,6 @@
-extends Area3D
+class_name InteractArea extends Area3D
 
-signal interacted
+signal interacted(interacter)
 
-func interact():
-	pass
+func interact(interacter):
+	emit_signal("interacted", interacter)

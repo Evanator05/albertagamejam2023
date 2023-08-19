@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpikd35h2mjce"]
+[gd_scene load_steps=6 format=3 uid="uid://dpikd35h2mjce"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_7jwfk"]
 
@@ -9,6 +9,9 @@ albedo_color = Color(0, 0, 1, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_legjo"]
 material = SubResource("StandardMaterial3D_dsasl")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_55hsi"]
+radius = 2.0
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_7jwfk")
@@ -36,3 +39,16 @@ target_position = Vector3(0, 0, 10)
 
 [node name="RayCast3D4" type="RayCast3D" parent="Raycasts"]
 target_position = Vector3(0, 0, -10)
+
+[node name="interactionArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="interactionArea"]
+shape = SubResource("CylinderShape3D_55hsi")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+billboard = 1
+modulate = Color(1, 0, 0, 1)
+text = "!"
+font_size = 256
