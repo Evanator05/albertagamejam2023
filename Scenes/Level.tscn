@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cu6yi1pxoioyp"]
+[gd_scene load_steps=12 format=3 uid="uid://cu6yi1pxoioyp"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_1snx0"]
 [ext_resource type="PackedScene" uid="uid://b2av77eexy866" path="res://Objects/Enemy.tscn" id="1_hkow6"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="4_gk0ah"]
 [ext_resource type="PackedScene" uid="uid://b0ww3e5x7xm8d" path="res://Objects/Door.tscn" id="5_hsegn"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="5_nq42l"]
+[ext_resource type="PackedScene" uid="uid://cnq0cu8t4e7ww" path="res://Objects/Box.tscn" id="8_48acx"]
 
 [sub_resource type="Environment" id="Environment_gyeoi"]
 background_mode = 1
@@ -100,3 +101,5 @@ timerLength = 5.0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 shape = SubResource("BoxShape3D_s14ge")
+
+[node name="Box" parent="." instance=ExtResource("8_48acx")]
