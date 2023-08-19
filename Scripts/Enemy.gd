@@ -4,6 +4,7 @@ var speed:float = 6
 
 @onready var navAgent:NavigationAgent3D = $NavigationAgent3D
 @export var target:Node3D
+var chaseTarget = null
 
 var nextPoint:Vector3 = Vector3()
 
@@ -25,7 +26,11 @@ func _ready():
 	getNextPoint()
 
 func _process(delta):
-	setTarget(patrolPath[currentPoint])
+	match state:
+		PATROL:
+			setTarget(patrolPath[currentPoint])
+		ALERT:
+			setTarget(chaseTarget)
 	
 	var moveDir:Vector3 = nextPoint-global_transform.origin
 	rotation.y = lerp_angle(rotation.y, getAngle(moveDir), 1-pow(0.002, delta))
@@ -50,4 +55,9 @@ func getAngle(dir):
 	var angle = -dir2D.angle()
 	angle -= PI/2
 	return angle
-	
+
+func _on_spot_area_body_entered(body):
+	# Player enters SpotArea cone
+	if (body.get_name() == "Player"):
+		state = ALERT
+		chaseTarget = body

@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2av77eexy866"]
+[gd_scene load_steps=5 format=3 uid="uid://b2av77eexy866"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_y3exf"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_wg24k"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_70sdp"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6b0bs"]
+points = PackedVector3Array(-1, 0, 1, -5, 0, -8, 5, 0, -8, -5, 4, -8, 5, 4, -8, 1, 0, 1, -1, 2, 1, 1, 2, 1)
 
 [node name="Enemy" type="CharacterBody3D"]
 axis_lock_angular_x = true
@@ -30,3 +33,10 @@ shadow_enabled = true
 spot_range = 10.0
 spot_attenuation = 0.0044871
 spot_angle_attenuation = 0.0037732
+
+[node name="SpotArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpotArea"]
+shape = SubResource("ConvexPolygonShape3D_6b0bs")
+
+[connection signal="body_entered" from="SpotArea" to="." method="_on_spot_area_body_entered"]
