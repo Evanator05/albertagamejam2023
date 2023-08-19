@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cu6yi1pxoioyp"]
+[gd_scene load_steps=16 format=3 uid="uid://cu6yi1pxoioyp"]
 
 [ext_resource type="PackedScene" uid="uid://b2av77eexy866" path="res://Objects/Enemy.tscn" id="1_hkow6"]
 [ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="1_tdowx"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="5_nq42l"]
 [ext_resource type="PackedScene" uid="uid://cnq0cu8t4e7ww" path="res://Objects/Box.tscn" id="8_48acx"]
 [ext_resource type="Texture2D" uid="uid://c0x103i73yd21" path="res://Textures/Exit Texture ( detailed ).png" id="9_88ykb"]
+[ext_resource type="Script" path="res://Scenes/UI.gd" id="10_unbmj"]
 
 [sub_resource type="Environment" id="Environment_gyeoi"]
 background_mode = 1
@@ -113,3 +114,19 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33, -2
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Exit"]
 mesh = SubResource("PlaneMesh_3r0e8")
 skeleton = NodePath("../..")
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("10_unbmj")
+
+[node name="Inventory" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InvContainer" type="GridContainer" parent="UI/Inventory"]
+layout_mode = 1
+offset_left = 8.0
+offset_top = 328.0
+offset_right = 186.0
+offset_bottom = 641.0

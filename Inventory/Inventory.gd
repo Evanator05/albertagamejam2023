@@ -5,21 +5,18 @@ var items = {
 		"Name":"Stun Gun",
 		"Type":"Weapon",
 		"Desc":"A stun gun to STUN your enemies. Temporary effect.",
-		"Uses":"",
 		"Icon": preload("res://icon.svg")
 	},
 	1: {
 		"Name":"Hacking Device",
 		"Type":"Device",
 		"Desc":"A hacking device. To HACK.",
-		"Uses":"",
 		"Icon": preload("res://icon.svg")
 	},
 	2: {
 		"Name":"Invisibility Cloak",
 		"Type":"Device",
 		"Desc":"Invisibility cloak to become INVISIBLE. Temporary effect.",
-		"Uses":"",
 		"Icon":preload("res://icon.svg")
 	}
 }
