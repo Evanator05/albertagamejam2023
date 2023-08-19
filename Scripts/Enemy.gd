@@ -1,33 +1,38 @@
 extends CharacterBody3D
 
+var speed:float = 6
 
-const SPEED = 5.0
-const JUMP_VELOCITY = 4.5
+@onready var navAgent:NavigationAgent3D = $NavigationAgent3D
+@export var target:Node3D
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var nextPoint:Vector3 = Vector3()
 
-@export var navMesh:Node3D
+@export var patrolPath:Array[Node3D]
 
+var state = PATROL
 
-func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y -= gravity * delta
+enum {PATROL, ALERT}
 
-	# Handle Jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+func _ready():
+	setTarget(target)
+	await get_tree().process_frame #wait until the next frame to start the path
+	getNextPoint()
 
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-
+func _process(delta):
+	var moveDir:Vector3 = nextPoint-global_transform.origin
+	if moveDir.length() < 1: #if the distence to the current point is less than 1 get the next point
+		if navAgent.is_target_reached():
+			pass
+		getNextPoint()
+	
+	moveDir = moveDir.normalized()
+	velocity = moveDir*speed
 	move_and_slide()
+
+func setTarget(t:Node3D):
+	target = t
+	var targetPos:Vector3 = target.global_transform.origin
+	navAgent.set_target_position(targetPos)
+
+func getNextPoint():
+	nextPoint = navAgent.get_next_path_position()
