@@ -24,6 +24,10 @@ func alive():
 	camera.offset.y = (getRoomSize()/2)+5
 	move_and_slide()
 
+func frozen(): # Elevator to the next level
+	camera.offset.y = (getRoomSize()/2)+5
+	move_and_slide()
+
 func dead():
 	pass
 
