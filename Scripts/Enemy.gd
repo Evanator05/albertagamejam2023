@@ -59,5 +59,19 @@ func getAngle(dir):
 func _on_spot_area_body_entered(body):
 	# Player enters SpotArea cone
 	if (body.get_name() == "Player"):
-		state = ALERT
-		chaseTarget = body
+		# Only "Spot" them if they're in line of sight
+		var ray = PhysicsRayQueryParameters3D.new()
+		ray.from = self.global_transform.origin
+		ray.to = body.global_transform.origin
+		ray.set_exclude([self.get_rid()])
+		var space_state = get_world_3d().direct_space_state
+		var intersection = space_state.intersect_ray(ray)
+		if not intersection.is_empty():
+			var col = intersection["collider"]
+			if col == body:
+				state = ALERT
+				chaseTarget = body
+
+func _on_die_area_body_entered(body):
+	if (body.get_name() == "Player" and state == ALERT):
+		get_tree().reload_current_scene()

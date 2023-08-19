@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2av77eexy866"]
+[gd_scene load_steps=6 format=3 uid="uid://b2av77eexy866"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_y3exf"]
 
@@ -8,6 +8,9 @@
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6b0bs"]
 points = PackedVector3Array(-1, 0, 1, -5, 0, -8, 5, 0, -8, -5, 4, -8, 5, 4, -8, 1, 0, 1, -1, 2, 1, 1, 2, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jxkyu"]
+radius = 1.0
 
 [node name="Enemy" type="CharacterBody3D"]
 axis_lock_angular_x = true
@@ -39,4 +42,11 @@ spot_angle_attenuation = 0.0037732
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SpotArea"]
 shape = SubResource("ConvexPolygonShape3D_6b0bs")
 
+[node name="DieArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DieArea"]
+shape = SubResource("SphereShape3D_jxkyu")
+
 [connection signal="body_entered" from="SpotArea" to="." method="_on_spot_area_body_entered"]
+[connection signal="body_entered" from="DieArea" to="." method="_on_die_area_body_entered"]
