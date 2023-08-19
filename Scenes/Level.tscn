@@ -62,7 +62,7 @@ omni_range = 17.0
 
 [node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_tdowx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
-camera = NodePath("")
+camera = NodePath("../Camera3D")
 
 [node name="Path" type="Node3D" parent="."]
 
@@ -77,7 +77,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, -2.5, -15)
 target = NodePath("../Path/Node3D")
 patrolPath = [NodePath("../Path/Node3D"), NodePath("../Path/Node3D2")]
 
-[node name="Camera3D" parent="." instance=ExtResource("5_f3vmu")]
+[node name="Camera3D" parent="." node_paths=PackedStringArray("track") instance=ExtResource("5_f3vmu")]
+track = NodePath("../Player")
 
 [node name="door" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("5_hsegn")]
 listenFor = NodePath("../MultiButton")
