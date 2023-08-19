@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cu6yi1pxoioyp"]
+[gd_scene load_steps=15 format=3 uid="uid://cu6yi1pxoioyp"]
 
 [ext_resource type="PackedScene" uid="uid://b2av77eexy866" path="res://Objects/Enemy.tscn" id="1_hkow6"]
 [ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="1_tdowx"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b0ww3e5x7xm8d" path="res://Objects/Door.tscn" id="5_hsegn"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="5_nq42l"]
 [ext_resource type="PackedScene" uid="uid://cnq0cu8t4e7ww" path="res://Objects/Box.tscn" id="8_48acx"]
+[ext_resource type="Texture2D" uid="uid://c0x103i73yd21" path="res://Textures/Exit Texture ( detailed ).png" id="9_88ykb"]
 
 [sub_resource type="Environment" id="Environment_gyeoi"]
 background_mode = 1
@@ -25,6 +26,12 @@ agent_radius = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s14ge"]
 size = Vector3(90, 1, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bg5pw"]
+albedo_texture = ExtResource("9_88ykb")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3r0e8"]
+material = SubResource("StandardMaterial3D_bg5pw")
 
 [node name="Level" type="Node3D"]
 
@@ -99,3 +106,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
 shape = SubResource("BoxShape3D_s14ge")
 
 [node name="Box" parent="." instance=ExtResource("8_48acx")]
+
+[node name="Exit" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33, -2.4, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Exit"]
+mesh = SubResource("PlaneMesh_3r0e8")
+skeleton = NodePath("../..")
