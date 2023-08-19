@@ -1,5 +1,12 @@
 extends Node
 
+func _ready():
+	addItem("Stun Gun")
+	addItem("Stun Gun")
+	addItem("Stun Gun")
+	addItem("Stun Gun")
+	addItem("Stun Gun")
+
 var items = {
 	0: {
 		"Name":"Stun Gun",
