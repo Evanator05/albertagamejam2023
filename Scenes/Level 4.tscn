@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="1_0ef3s"]
 [ext_resource type="Script" path="res://Scripts/Level.gd" id="1_cfxy0"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_5unpc"]
-[ext_resource type="Material" uid="uid://dh40gfqmsavuk" path="res://Materials/map.material" id="2_g6v75"]
+[ext_resource type="Material" path="res://Materials/map.material" id="2_g6v75"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_b5cxu"]
 [ext_resource type="PackedScene" uid="uid://b2av77eexy866" path="res://Objects/Enemy.tscn" id="6_fsayn"]
 [ext_resource type="PackedScene" uid="uid://bn5pu4gcmr0oj" path="res://Objects/Elevator.tscn" id="7_odrwp"]
@@ -464,94 +464,94 @@ patrolPath = [NodePath("../Guard 7 path/Node3D"), NodePath("../Guard 7 path/Node
 [node name="Guard 1 path" type="Node3D" parent="."]
 
 [node name="Node3D" type="Node3D" parent="Guard 1 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, -2, 7)
 
 [node name="Node3D2" type="Node3D" parent="Guard 1 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 27)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, -2, 27)
 
 [node name="Node3D3" type="Node3D" parent="Guard 1 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 27)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -2, 27)
 
 [node name="Guard 2 path" type="Node3D" parent="."]
 
 [node name="Node3D" type="Node3D" parent="Guard 2 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -2, 7)
 
 [node name="Node3D2" type="Node3D" parent="Guard 2 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2, 7)
 
 [node name="Node3D3" type="Node3D" parent="Guard 2 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2, 20)
 
 [node name="Guard 3 path" type="Node3D" parent="."]
 
 [node name="Node3D" type="Node3D" parent="Guard 3 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 27)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -2, 27)
 
 [node name="Node3D2" type="Node3D" parent="Guard 3 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 27)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -2, 27)
 
 [node name="Node3D3" type="Node3D" parent="Guard 3 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 19)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -2, 19)
 
 [node name="Node3D4" type="Node3D" parent="Guard 3 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 19)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, -2, 19)
 
 [node name="Node3D5" type="Node3D" parent="Guard 3 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0, 7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, -2, 7)
 
 [node name="Guard 4 path" type="Node3D" parent="."]
 
 [node name="Node3D" type="Node3D" parent="Guard 4 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, 15)
 
 [node name="Node3D2" type="Node3D" parent="Guard 4 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -2, 15)
 
 [node name="Node3D3" type="Node3D" parent="Guard 4 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -2, -1)
 
 [node name="Node3D4" type="Node3D" parent="Guard 4 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, -1)
 
 [node name="Node3D5" type="Node3D" parent="Guard 4 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2, -7)
 
 [node name="Guard 5 path" type="Node3D" parent="."]
 
 [node name="Node3D" type="Node3D" parent="Guard 5 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, -2, 18)
 
 [node name="Node3D2" type="Node3D" parent="Guard 5 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, 27)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, -2, 27)
 
 [node name="Guard 6 path" type="Node3D" parent="."]
 
 [node name="Node3D" type="Node3D" parent="Guard 6 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53, 0, 10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53, -2, 10)
 
 [node name="Node3D2" type="Node3D" parent="Guard 6 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, -2, 9)
 
 [node name="Node3D3" type="Node3D" parent="Guard 6 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, -2, 3)
 
 [node name="Node3D4" type="Node3D" parent="Guard 6 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 18)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, -2, 18)
 
 [node name="Guard 7 path" type="Node3D" parent="."]
 
 [node name="Node3D" type="Node3D" parent="Guard 7 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, -2, -3)
 
 [node name="Node3D2" type="Node3D" parent="Guard 7 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, -2, -3)
 
 [node name="Node3D3" type="Node3D" parent="Guard 7 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, -2, 3)
 
 [node name="Node3D4" type="Node3D" parent="Guard 7 path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, -2, -12)
 
 [node name="startPos" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, -2, -1)
