@@ -1,7 +1,7 @@
 class_name Player extends CharacterBody3D
 
 var maxSpeed:float = 8
-var ammo = 3
+var ammo = 5
 
 @export var camera:Camera3D
 
@@ -40,7 +40,7 @@ func dead():
 
 func die():
 	global_transform.origin = Globals.mapSections.respawnPoint
-	ammo = 4
+	ammo = 5
 	$UI.updateAmmo(ammo)
 
 func getAngle(dir):
