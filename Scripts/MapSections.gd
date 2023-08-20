@@ -1,11 +1,12 @@
 extends Node3D
 
 var sections = [
-	"res://Scenes/intro level.tscn",
+	"res://Scenes/Level 0 intro.tscn",
 	"res://Scenes/Level 1.tscn",
 	"res://Scenes/Level 2.tscn",
+	"res://Scenes/Level 3.tscn",
 	"res://Scenes/Level 4.tscn",
-	"res://Scenes/Level 5.tscn"
+	"res://Scenes/Level Hard.tscn"
 ]
 
 var currentMap
@@ -17,7 +18,7 @@ func _ready():
 	loadSection(0)
 
 func loadSection(index:int):
-	var mapScene := load(sections[index])
+	var mapScene:Resource = load(sections[index])
 	var mapInst = mapScene.instantiate()
 	add_child(mapInst)
 	var diff = Vector3()

@@ -1,13 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4wt6ch0fhyvh"]
+[gd_scene load_steps=10 format=3 uid="uid://b4wt6ch0fhyvh"]
 
 [ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="1_aeu2q"]
-[ext_resource type="Material" path="res://Materials/map.material" id="1_n0tc3"]
+[ext_resource type="Material" uid="uid://dh40gfqmsavuk" path="res://Materials/map.material" id="1_n0tc3"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_alxov"]
 [ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="2_c024h"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_8dvch"]
-[ext_resource type="PackedScene" uid="uid://ccoersjsjhk7s" path="res://Objects/Camera.tscn" id="5_r1457"]
+[ext_resource type="PackedScene" path="res://Objects/Camera.tscn" id="5_r1457"]
 [ext_resource type="PackedScene" uid="uid://b2av77eexy866" path="res://Objects/Enemy.tscn" id="6_gh4we"]
-[ext_resource type="PackedScene" path="res://Objects/Exit.tscn" id="7_fa46u"]
 [ext_resource type="PackedScene" uid="uid://bn5pu4gcmr0oj" path="res://Objects/Elevator.tscn" id="8_gy0r1"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_ejvsc"]
@@ -333,9 +332,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -3)
 
 [node name="Node3D4" type="Node3D" parent="Guard 3 patrol"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, -3)
-
-[node name="Exit" parent="." instance=ExtResource("7_fa46u")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -3, -2.38419e-07, -30)
 
 [node name="Elevator" parent="." instance=ExtResource("8_gy0r1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -32)
