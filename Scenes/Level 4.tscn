@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://bi66hobgyprrm"]
+[gd_scene load_steps=8 format=3 uid="uid://bi66hobgyprrm"]
 
 [ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="1_0ef3s"]
-[ext_resource type="Material" uid="uid://dh40gfqmsavuk" path="res://Materials/map.material" id="1_vcllc"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_5unpc"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_b5cxu"]
 [ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="4_3o4sd"]
@@ -19,7 +18,6 @@ agent_radius = 1.0
 navigation_mesh = SubResource("NavigationMesh_jp448")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D"]
-material_override = ExtResource("1_vcllc")
 use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
@@ -131,6 +129,51 @@ size = Vector3(7.405, 4, 8)
 transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, -8, 0, 10)
 flip_faces = true
 size = Vector3(6, 4, 4)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 4)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 15)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5)
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -17)
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -11)
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -11)
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -11)
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -29)
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -29)
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -36)
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -28)
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -35)
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -35)
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -11)
 
 [node name="door" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_0ef3s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2, 8)
