@@ -1,6 +1,7 @@
 class_name Player extends CharacterBody3D
 
 var maxSpeed:float = 8
+var ammo = 3
 
 @export var camera:Camera3D
 
@@ -13,6 +14,7 @@ var state:Callable
 
 func _ready():
 	state = alive
+	$UI.updateAmmo(ammo)
 
 func _process(delta):
 	$Label3D.visible = canInteract()
@@ -78,8 +80,12 @@ func getMousePos():
 		return null
 		
 func shoot():
+	if not ammo>0:
+		return
 	if Input.is_action_just_pressed("shoot"):
 		if !gun_anim.is_playing():
+			ammo -= 1 
+			$UI.updateAmmo(ammo)
 			gun_anim.play("Shooting")
 			instance = bullet.instantiate()
 			instance.position = gun_barrel.global_position

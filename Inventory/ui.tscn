@@ -11,26 +11,31 @@ script = ExtResource("1_tp7bv")
 
 [node name="Inventory" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="InvContainer" type="GridContainer" parent="Inventory"]
 layout_mode = 1
-offset_left = 8.0
-offset_top = 424.0
-offset_right = 72.0
-offset_bottom = 636.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/v_separation = 10
 script = ExtResource("2_vitgr")
 
 [node name="Cloak" type="TextureRect" parent="Inventory/InvContainer"]
+visible = false
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 texture = ExtResource("3_etf4p")
 expand_mode = 3
 
 [node name="0" type="Label" parent="Inventory/InvContainer/Cloak"]
+visible = false
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -46,12 +51,14 @@ text = "0
 horizontal_alignment = 2
 
 [node name="Hack" type="TextureRect" parent="Inventory/InvContainer"]
+visible = false
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 texture = ExtResource("4_xct3j")
 expand_mode = 3
 
 [node name="0" type="Label" parent="Inventory/InvContainer/Hack"]
+visible = false
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -66,13 +73,21 @@ text = "0
 "
 horizontal_alignment = 2
 
-[node name="Gun" type="TextureRect" parent="Inventory/InvContainer"]
+[node name="Gun" type="TextureRect" parent="Inventory"]
 custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.79
+anchor_right = 0.111
+anchor_bottom = 1.0
+offset_top = 0.0799861
+offset_right = 8.12799
+grow_vertical = 0
+size_flags_vertical = 8
 texture = ExtResource("5_ydlep")
 expand_mode = 3
 
-[node name="0" type="Label" parent="Inventory/InvContainer/Gun"]
+[node name="0" type="Label" parent="Inventory/Gun"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -83,6 +98,7 @@ offset_left = -40.0
 offset_top = -26.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_font_sizes/font_size = 64
 text = "0
 "
 horizontal_alignment = 2

@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 Levels="*res://Scripts/Levels.gd"
 Inventory="*res://Inventory/Inventory.gd"
 
+[display]
+
+window/size/mode=3
+
 [dotnet]
 
 project/assembly_name="AlbertaGameJam2023"
