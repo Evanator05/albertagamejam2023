@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://dutb7t4431yxx" path="res://Audio/Music/Title Screen_easy loopable.mp3" id="5_ys5yg"]
 
 [sub_resource type="Theme" id="Theme_iw7e8"]
-default_font_size = 30
+default_font_size = 24
 
 [node name="Title" type="Control"]
 layout_mode = 3
@@ -61,19 +61,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -83.5
-offset_top = -65.0
-offset_right = 83.5
-offset_bottom = 65.0
+offset_left = -344.5
+offset_top = -270.0
+offset_right = 344.5
+offset_bottom = 270.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_iw7e8")
-text = "Your mission: escape!
+text = "Though your cover was blown by an enemy drone 
+during Operation \"I Spy,\" the mission isn't over! 
+With minimal bullets left in your chamber, you must 
+now stealthily fight your way through enemy 
+headquarters and escape with the asset.
+Good luck, agent.
 
 WASD to move
 E to interact
 Click to shoot
 "
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Intro/Label"]
 layout_mode = 1
@@ -82,10 +88,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -101.5
-offset_top = 64.5
-offset_right = 56.5
-offset_bottom = 114.5
+offset_left = -79.0
+offset_top = -50.0
+offset_right = 79.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Kick Butt"
