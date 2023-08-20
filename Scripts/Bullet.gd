@@ -18,6 +18,9 @@ func _process(delta):
 		global_transform.origin = ray.get_collision_point()
 		particles.emitting = true
 		mesh.visible = false
+		ray.enabled = false
+		if ray.get_collider().is_in_group("enemy"):
+			ray.get_collider().hit()
 		await get_tree().create_timer(1.0).timeout
 		queue_free()
 
