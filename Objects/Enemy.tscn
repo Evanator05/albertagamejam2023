@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b2av77eexy866"]
+[gd_scene load_steps=8 format=3 uid="uid://b2av77eexy866"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_y3exf"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_wg24k"]
+[ext_resource type="Texture2D" uid="uid://dnqey88gknsn" path="res://Textures/enemy.png" id="2_c2oiu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_70sdp"]
 
@@ -12,14 +11,17 @@ points = PackedVector3Array(-1, 0, 1, -5, 0, -8, 5, 0, -8, -5, 4, -8, 5, 4, -8, 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_55jwj"]
 radius = 1.0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_projf"]
+transparency = 1
+albedo_texture = ExtResource("2_c2oiu")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_dg1hk"]
+material = SubResource("StandardMaterial3D_projf")
+
 [node name="Enemy" type="CharacterBody3D" groups=["enemy"]]
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 script = ExtResource("1_y3exf")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["enemy"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("CapsuleMesh_wg24k")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["enemy"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -49,6 +51,15 @@ shape = SubResource("ConvexPolygonShape3D_6b0bs")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="die"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_55jwj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, 0, 1, 0)
+mesh = SubResource("PlaneMesh_dg1hk")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+light_energy = 0.2
+omni_range = 2.0
 
 [connection signal="body_part_hit" from="." to="." method="_on_body_part_hit"]
 [connection signal="body_entered" from="SpotArea" to="." method="_on_spot_area_body_entered"]

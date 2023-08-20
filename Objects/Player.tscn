@@ -51,11 +51,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 visible = false
 billboard = 1
 modulate = Color(1, 0, 0, 1)
-text = "!"
-font_size = 256
+text = "[E]"
+font_size = 128
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-1.5, 0, -2.26494e-07, 0, 1.5, 0, 2.26494e-07, 0, -1.5, 0, 0, 0)
 mesh = SubResource("PlaneMesh_4akqu")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
