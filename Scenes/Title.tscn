@@ -1,0 +1,106 @@
+[gd_scene load_steps=7 format=3 uid="uid://bi3mac4aqpu4n"]
+
+[ext_resource type="Script" path="res://Scenes/Title.gd" id="1_m6rwx"]
+[ext_resource type="Texture2D" uid="uid://cw6nuvnnnk7b4" path="res://Textures/titlesplash.png" id="1_yay6o"]
+[ext_resource type="Texture2D" uid="uid://du31ku7lfm6kn" path="res://Textures/start.png" id="2_d5w48"]
+[ext_resource type="Texture2D" uid="uid://be4qbg3jaijko" path="res://Textures/start_clicked.png" id="3_1vnxv"]
+[ext_resource type="AudioStream" uid="uid://dutb7t4431yxx" path="res://Audio/Music/Title Screen_easy loopable.mp3" id="5_ys5yg"]
+
+[sub_resource type="Theme" id="Theme_4tl5j"]
+default_font_size = 25
+
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m6rwx")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yay6o")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -508.0
+offset_top = -209.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("2_d5w48")
+texture_hover = ExtResource("3_1vnxv")
+
+[node name="Intro" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.709804)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Intro"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -149.5
+offset_right = 230.0
+offset_bottom = 149.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_4tl5j")
+text = "Your mission: escape.
+
+WASD to move
+E to interact
+Click to shoot"
+
+[node name="Button" type="Button" parent="Intro/RichTextLabel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -40.5
+offset_top = -31.0
+offset_right = 40.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Move Out!"
+
+[node name="TitleMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ys5yg")
+volume_db = 5.0
+autoplay = true
+
+[node name="BlackRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Intro/RichTextLabel/Button" to="." method="_on_button_pressed"]
