@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Inventory="*res://Scripts/Inventory.gd"
 Levels="*res://Scripts/Levels.gd"
+Inventory="*res://Inventory/Inventory.gd"
 
 [dotnet]
 

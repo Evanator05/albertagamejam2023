@@ -1,15 +1,16 @@
-[gd_scene load_steps=17 format=3 uid="uid://cu6yi1pxoioyp"]
+[gd_scene load_steps=18 format=3 uid="uid://cu6yi1pxoioyp"]
 
 [ext_resource type="PackedScene" uid="uid://b2av77eexy866" path="res://Objects/Enemy.tscn" id="1_hkow6"]
 [ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="1_tdowx"]
 [ext_resource type="Material" uid="uid://blsyleb4hu5g2" path="res://Materials/concrete.material" id="2_m8iry"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="4_gk0ah"]
 [ext_resource type="PackedScene" uid="uid://ccoersjsjhk7s" path="res://Objects/Camera.tscn" id="5_f3vmu"]
-[ext_resource type="PackedScene" uid="uid://b0ww3e5x7xm8d" path="res://Objects/Door.tscn" id="5_hsegn"]
+[ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="5_hsegn"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="5_nq42l"]
 [ext_resource type="PackedScene" uid="uid://cnq0cu8t4e7ww" path="res://Objects/Box.tscn" id="8_48acx"]
 [ext_resource type="Texture2D" uid="uid://c0x103i73yd21" path="res://Textures/Exit Texture ( detailed ).png" id="9_88ykb"]
 [ext_resource type="Script" path="res://Scenes/UI.gd" id="10_unbmj"]
+[ext_resource type="Script" path="res://Scenes/InvContainer.gd" id="11_8cea3"]
 [ext_resource type="PackedScene" uid="uid://cg5is6bo5csdd" path="res://Inventory/Slot.tscn" id="11_r2b1a"]
 
 [sub_resource type="Environment" id="Environment_gyeoi"]
@@ -133,13 +134,17 @@ offset_top = 424.0
 offset_right = 72.0
 offset_bottom = 636.0
 theme_override_constants/v_separation = 10
+script = ExtResource("11_8cea3")
 
 [node name="Stun" parent="UI/Inventory/InvContainer" instance=ExtResource("11_r2b1a")]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 
 [node name="Hack" parent="UI/Inventory/InvContainer" instance=ExtResource("11_r2b1a")]
+visible = false
 layout_mode = 2
 
 [node name="Cloak" parent="UI/Inventory/InvContainer" instance=ExtResource("11_r2b1a")]
+visible = false
 layout_mode = 2
