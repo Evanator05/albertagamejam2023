@@ -1,0 +1,151 @@
+[gd_scene load_steps=19 format=3 uid="uid://c6tmv5oh257cx"]
+
+[ext_resource type="Environment" uid="uid://ptqj7rawi0cv" path="res://Environment.tres" id="1_phb07"]
+[ext_resource type="Material" uid="uid://blsyleb4hu5g2" path="res://Materials/concrete.material" id="2_gea2q"]
+[ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="3_w4qso"]
+[ext_resource type="PackedScene" uid="uid://b2av77eexy866" path="res://Objects/Enemy.tscn" id="4_35d17"]
+[ext_resource type="PackedScene" uid="uid://ccoersjsjhk7s" path="res://Objects/Camera.tscn" id="5_oc8pa"]
+[ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="6_idruu"]
+[ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="7_j7wjl"]
+[ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="8_l7s5h"]
+[ext_resource type="PackedScene" uid="uid://cnq0cu8t4e7ww" path="res://Objects/Box.tscn" id="9_i6gcx"]
+[ext_resource type="Texture2D" uid="uid://c0x103i73yd21" path="res://Textures/Exit Texture ( detailed ).png" id="10_c4tuv"]
+[ext_resource type="Script" path="res://Scenes/UI.gd" id="11_qjonj"]
+[ext_resource type="Script" path="res://Scenes/InvContainer.gd" id="12_6lmer"]
+[ext_resource type="PackedScene" uid="uid://cg5is6bo5csdd" path="res://Inventory/Slot.tscn" id="13_muw36"]
+[ext_resource type="PackedScene" uid="uid://bn5pu4gcmr0oj" path="res://Objects/Elevator.tscn" id="14_jlv3h"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_83wvj"]
+vertices = PackedVector3Array(-24.75, -2, -35.75, -32.75, -2, -35.75, -32.75, -2, -26.5, 33, -2, -26.5, 33, -2, -35.75, 24.75, -2, -35.75, -32.75, -2, -7.75, -32.75, -2, 1.75, -24.75, -2, 1.75, 24.75, -2, 1.75, 33, -2, 1.75, 33, -2, -7.75, -16.5, -2, -35.75, -24.75, -2, -35.75, -32.75, -2, -26.5, -32.75, -2, -7.75, -24.75, -2, 1.75, -16.5, -2, 1.75, 33, -2, -26.5, 24.75, -2, -35.75, 16.5, -2, -35.75, 16.5, -2, 1.75, 24.75, -2, 1.75, 33, -2, -7.75, -32.75, -2, -17, -32.75, -2, -7.75, -16.5, -2, 1.75, -8.25, -2, 1.75, -16.5, -2, -35.75, -32.75, -2, -26.5, -32.75, -2, -17, -8.25, -2, -35.75, 16.5, -2, 1.75, 33, -2, -7.75, 33, -2, -17, 8.25, -2, 1.75, 33, -2, -17, 33, -2, -26.5, 16.5, -2, -35.75, 8.25, -2, -35.75, 8.25, -2, 1.75, 33, -2, -17, 8.25, -2, -35.75, 0, -2, -35.75, 0, -2, 1.75, -8.25, -2, -35.75, -32.75, -2, -17, -8.25, -2, 1.75, 0, -2, 1.75, 0, -2, -35.75)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(8, 7, 6), PackedInt32Array(11, 10, 9), PackedInt32Array(14, 13, 12), PackedInt32Array(17, 16, 15), PackedInt32Array(20, 19, 18), PackedInt32Array(23, 22, 21), PackedInt32Array(25, 24, 26), PackedInt32Array(26, 24, 27), PackedInt32Array(29, 28, 30), PackedInt32Array(30, 28, 31), PackedInt32Array(33, 32, 34), PackedInt32Array(34, 32, 35), PackedInt32Array(37, 36, 38), PackedInt32Array(38, 36, 39), PackedInt32Array(40, 44, 41), PackedInt32Array(41, 44, 42), PackedInt32Array(42, 44, 43), PackedInt32Array(45, 49, 46), PackedInt32Array(46, 49, 47), PackedInt32Array(47, 49, 48)]
+agent_radius = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s14ge"]
+size = Vector3(180, 1, 108)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bg5pw"]
+albedo_texture = ExtResource("10_c4tuv")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3r0e8"]
+material = SubResource("StandardMaterial3D_bg5pw")
+
+[node name="Level" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_phb07")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_83wvj")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D"]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -17)
+flip_faces = true
+size = Vector3(68, 4, 40)
+material = ExtResource("2_gea2q")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 6.95, -1.1)
+flip_faces = true
+size = Vector3(2, 20, 2)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+shadow_enabled = true
+omni_range = 10.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 2, -26)
+shadow_enabled = true
+omni_range = 17.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2, -26)
+shadow_enabled = true
+omni_range = 17.0
+
+[node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("3_w4qso")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+camera = NodePath("../Camera3D")
+
+[node name="Path" type="Node3D" parent="."]
+
+[node name="Node3D" type="Node3D" parent="Path"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33, -2.5, -15)
+
+[node name="Node3D2" type="Node3D" parent="Path"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, -2.5, -15)
+
+[node name="Enemy" parent="." node_paths=PackedStringArray("target", "patrolPath") instance=ExtResource("4_35d17")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, -2.5, -15)
+target = NodePath("../Path/Node3D")
+patrolPath = [NodePath("../Path/Node3D"), NodePath("../Path/Node3D2")]
+
+[node name="Camera3D" parent="." node_paths=PackedStringArray("track") instance=ExtResource("5_oc8pa")]
+track = NodePath("../Player")
+
+[node name="door" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("6_idruu")]
+listenFor = NodePath("../MultiButton")
+
+[node name="MultiButton" parent="." instance=ExtResource("7_j7wjl")]
+
+[node name="Button" parent="MultiButton" instance=ExtResource("8_l7s5h")]
+timerLength = 5.0
+
+[node name="Button2" parent="MultiButton" instance=ExtResource("8_l7s5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -1.5, 0)
+timerLength = 5.0
+
+[node name="OrderedButton" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+shape = SubResource("BoxShape3D_s14ge")
+
+[node name="Box" parent="." instance=ExtResource("9_i6gcx")]
+
+[node name="Exit" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33, -2.4, -1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Exit"]
+mesh = SubResource("PlaneMesh_3r0e8")
+skeleton = NodePath("../..")
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("11_qjonj")
+
+[node name="Inventory" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InvContainer" type="GridContainer" parent="UI/Inventory"]
+layout_mode = 1
+offset_left = 8.0
+offset_top = 424.0
+offset_right = 72.0
+offset_bottom = 636.0
+theme_override_constants/v_separation = 10
+script = ExtResource("12_6lmer")
+
+[node name="Stun" parent="UI/Inventory/InvContainer" instance=ExtResource("13_muw36")]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Hack" parent="UI/Inventory/InvContainer" instance=ExtResource("13_muw36")]
+visible = false
+layout_mode = 2
+
+[node name="Cloak" parent="UI/Inventory/InvContainer" instance=ExtResource("13_muw36")]
+visible = false
+layout_mode = 2
+
+[node name="Elevator" parent="." instance=ExtResource("14_jlv3h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, -2.4, -1.1)

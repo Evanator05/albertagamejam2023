@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Level.gd" id="1_5ultj"]
 [ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="1_wn65x"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_3byu8"]
-[ext_resource type="Material" uid="uid://dh40gfqmsavuk" path="res://Materials/map.material" id="2_4s106"]
+[ext_resource type="Material" path="res://Materials/map.material" id="2_4s106"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_sdh0m"]
 [ext_resource type="PackedScene" uid="uid://bn5pu4gcmr0oj" path="res://Objects/Elevator.tscn" id="5_vmqtg"]
 
@@ -90,7 +90,6 @@ omni_range = 7.0
 
 [node name="Elevator" parent="." instance=ExtResource("5_vmqtg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -11)
-levelId = 1
 
 [node name="startPos" type="Node3D" parent="."]
 
