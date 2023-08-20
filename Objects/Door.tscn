@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1rkum0jnbvdo"]
+[gd_scene load_steps=6 format=3 uid="uid://c1rkum0jnbvdo"]
 
 [ext_resource type="Script" path="res://Scripts/Door.gd" id="1_vjq12"]
+[ext_resource type="Texture2D" uid="uid://bl6cgnpa5d3wg" path="res://Textures/Outer walls texture ( basic ).png" id="2_qu5rd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dn8if"]
+albedo_texture = ExtResource("2_qu5rd")
+uv1_scale = Vector3(0.25, 0.25, 0.25)
+uv1_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_otmqb"]
+material = SubResource("StandardMaterial3D_dn8if")
 size = Vector3(4, 4, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_idoms"]

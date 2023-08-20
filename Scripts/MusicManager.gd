@@ -4,6 +4,7 @@ extends Node
 var currentTrackId:int = 0
 
 func _ready():
+	Globals.musicManager = self
 	changeSong("res://Audio/Music/Holding_Cell_Area_-_Calm.mp3", "res://Audio/Music/Holding_Cell_Area_-_Danger.mp3")
 	changeTrack(0)
 

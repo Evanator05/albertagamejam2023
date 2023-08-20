@@ -10,7 +10,7 @@ func _ready():
 
 func open():
 	var tween = get_tree().create_tween()
-	tween.tween_property($StaticBody3D, "position:y", -4, 0.5)
+	tween.tween_property($StaticBody3D, "position:y", -4.1, 0.5)
 	
 func close():
 	var tween = get_tree().create_tween()
