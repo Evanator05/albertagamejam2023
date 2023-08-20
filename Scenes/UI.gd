@@ -1,11 +1,12 @@
 extends CanvasLayer
 
+func updateAmmo(amount):
+	$"Inventory/InvContainer/Gun/0".text = str(amount)
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func updateCloak(amount):
+	$"Inventory/InvContainer/Hack/0".text = str(amount)
+	
+func updateHack(amount):
+	$"Inventory/InvContainer/Hack/0".text = str(amount)
+	
+	
