@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ckmyf2lsejipk"]
 
-[ext_resource type="PackedScene" path="res://Objects/Door.tscn" id="1_7ieoh"]
+[ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="1_7ieoh"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_dn6g6"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_rh07f"]
 [ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="4_o6sbw"]
@@ -83,14 +83,14 @@ listenFor = NodePath("../MultiButton")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.17861, 0, -2.88549)
 
 [node name="Button" parent="NavigationRegion3D/MultiButton" instance=ExtResource("3_rh07f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.82139, -2, -0.114511)
-timerLength = 5.0
+transform = Transform3D(2.735, 0, 0, 0, 0.21, 0, 0, 0, 0.385, 2.82139, -1, -0.114511)
+timerLength = 3.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27.3424)
 
 [node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("4_o6sbw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.558234, 9.53674e-07, 5.1498)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0441198, 9.53674e-07, 5.1498)
 camera = NodePath("../Camera3D")
 
 [node name="Camera3D" parent="." node_paths=PackedStringArray("track") instance=ExtResource("5_c3g07")]
@@ -105,16 +105,16 @@ patrolPath = [NodePath("../Guard path/Node3D"), NodePath("../Guard path/Node3D2"
 [node name="Guard path" type="Node3D" parent="."]
 
 [node name="Node3D" type="Node3D" parent="Guard path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0, -16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, -2, -16)
 
 [node name="Node3D2" type="Node3D" parent="Guard path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, -16)
 
 [node name="Node3D3" type="Node3D" parent="Guard path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 4)
 
 [node name="Node3D5" type="Node3D" parent="Guard path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, -2, 4)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.01223)

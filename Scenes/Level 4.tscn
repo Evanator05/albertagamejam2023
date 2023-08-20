@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://bi66hobgyprrm"]
+
+[ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="1_0ef3s"]
+[ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_5unpc"]
+[ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_b5cxu"]
+[ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="4_3o4sd"]
+[ext_resource type="PackedScene" path="res://Objects/Camera.tscn" id="5_86vxp"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_jp448"]
+vertices = PackedVector3Array(-8.75, -1.5, 6.5, -7, -1.5, 6.75, -7, -1.5, 3.75, -8.75, -1.5, 3.75, -6.25, -1.5, 3, -5, -1.5, -0.75, -13.75, -1.5, -0.75, -9.5, -1.5, 3, -7, -1.5, 3.75, -9.5, -1.5, 3, -8.75, -1.5, 3.75, -7, -1.5, 3.75, -13.75, -1.5, -0.75, -13.75, -1.5, 3, -9.5, -1.5, 3, -6.25, -1.5, 3, -4.75, -1.5, 3, -5, -1.5, -0.75, 4.5, -1.5, -0.75, -5, -1.5, -0.75, -4.75, -1.5, 3, 4.5, -1.5, 3, 4.5, -1.5, 3, 14, -1.5, 3, 14, -1.5, -0.75, 4.5, -1.5, -0.75, -7, -1.5, 6.75, -8.75, -1.5, 6.5, -8.75, -1.5, 8.25, -7, -1.5, 8.5, -9.75, -1.5, 9.25, -11.75, -1.5, 9.25, -11.75, -1.5, 14.75, -6.25, -1.5, 9.25, -7, -1.5, 8.5, -8.75, -1.5, 8.25, -9.75, -1.5, 9.25, -11.75, -1.5, 14.75, -4, -1.5, 14.75, -4, -1.5, 14.75, -4, -1.5, 9.25, -6.25, -1.5, 9.25)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(8, 7, 4), PackedInt32Array(4, 7, 5), PackedInt32Array(5, 7, 6), PackedInt32Array(9, 11, 10), PackedInt32Array(14, 13, 12), PackedInt32Array(17, 16, 15), PackedInt32Array(21, 20, 18), PackedInt32Array(18, 20, 19), PackedInt32Array(25, 24, 22), PackedInt32Array(22, 24, 23), PackedInt32Array(29, 28, 26), PackedInt32Array(26, 28, 27), PackedInt32Array(32, 31, 30), PackedInt32Array(34, 33, 35), PackedInt32Array(35, 33, 36), PackedInt32Array(36, 33, 37), PackedInt32Array(37, 33, 38), PackedInt32Array(41, 40, 39)]
+agent_radius = 1.0
+
+[node name="Level 3" type="Node3D"]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_jp448")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D"]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+flip_faces = true
+size = Vector3(30, 4, 6)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 12)
+flip_faces = true
+size = Vector3(10, 4, 8)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, -8, 0, 7)
+flip_faces = true
+size = Vector3(6, 4, 4)
+
+[node name="door" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_0ef3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2, 5)
+listenFor = NodePath("../MultiButton")
+
+[node name="MultiButton" parent="." instance=ExtResource("2_5unpc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 1)
+
+[node name="Button" parent="MultiButton" instance=ExtResource("3_b5cxu")]
+transform = Transform3D(0.745, 0, 0, 0, -1.19551e-07, -1, 0, 2.735, -4.37114e-08, 0.918586, -0.5, 4.85302)
+timerLength = 3.0
+
+[node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("4_3o4sd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 1)
+camera = NodePath("../Camera3D")
+
+[node name="Camera3D" parent="." node_paths=PackedStringArray("track") instance=ExtResource("5_86vxp")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 11.9555, 0, 0.870932)
+track = NodePath("../Player")

@@ -1,12 +1,5 @@
 extends Node
 
-func _ready():
-	addItem("Stun Gun")
-	addItem("Stun Gun")
-	addItem("Stun Gun")
-	addItem("Stun Gun")
-	addItem("Stun Gun")
-
 var items = {
 	0: {
 		"Name":"Stun Gun",
@@ -44,3 +37,13 @@ func addItem(itemName):
 				var tempDict = items[i]
 				tempDict["Count"] = 1
 				inventory[inventory.size()] = tempDict
+				
+func removeItem(itemName):
+	var hasItem = true
+	for i in inventory:
+		if inventory[i]["Name"] == itemName:
+			inventory[i]["Count"] -= 1
+			hasItem = false
+		else:
+			hasItem = false 
+	
