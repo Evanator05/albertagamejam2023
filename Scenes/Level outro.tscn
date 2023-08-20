@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://gmlbpceudvqi"]
+
+[ext_resource type="Script" path="res://Scripts/Level.gd" id="1_f3nyi"]
+[ext_resource type="Material" uid="uid://dh40gfqmsavuk" path="res://Materials/map.material" id="2_hy6r3"]
+[ext_resource type="Script" path="res://Scripts/finalCutscene.gd" id="3_1jolx"]
+[ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="4_cognd"]
+[ext_resource type="PackedScene" uid="uid://ccoersjsjhk7s" path="res://Objects/Camera.tscn" id="5_shvgf"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_qegbt"]
+vertices = PackedVector3Array(-3.75, -1.5, -1.25, -5.25, -1.5, -1.25, -5.25, -1.5, 1.5, -3.5, -1.5, 1.5, 0.75, -1.5, -1.25, 3.5, -1.5, -1.25, 3.5, -1.5, -3.25, -3.25, -1.5, -3.25, -3.25, -1.5, -1.75, -3.25, -1.5, -1.75, -3.75, -1.5, -1.25, -3.5, -1.5, 1.5, 0.75, -1.5, 1.25, 0.75, -1.5, -1.25, 3.5, -1.5, 3.25, 3.5, -1.5, 1.25, 0.75, -1.5, 1.25, -3.5, -1.5, 1.5, -3.25, -1.5, 3.25, 1.75, -11.5, -0.25, 1.75, -11.5, 0.5, 2.5, -11.5, 0.5, 2.5, -11.5, -0.25)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 8), PackedInt32Array(6, 8, 7), PackedInt32Array(10, 9, 11), PackedInt32Array(11, 9, 13), PackedInt32Array(11, 13, 12), PackedInt32Array(15, 14, 16), PackedInt32Array(16, 14, 18), PackedInt32Array(16, 18, 17), PackedInt32Array(22, 21, 19), PackedInt32Array(19, 21, 20)]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mddav"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bffx2"]
+size = Vector3(1, 5, 7)
+
+[node name="Level outro" type="Node3D"]
+script = ExtResource("1_f3nyi")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_qegbt")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D"]
+material_override = ExtResource("2_hy6r3")
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+flip_faces = true
+size = Vector3(8, 4, 8)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+flip_faces = true
+size = Vector3(2, 4, 4)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 0)
+flip_faces = true
+size = Vector3(16, 4, 14)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -7, 0)
+flip_faces = true
+size = Vector3(2, 10, 2)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, 0)
+size = Vector3(42, 8, 76)
+material = SubResource("StandardMaterial3D_mddav")
+
+[node name="startPos" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 0)
+
+[node name="endPos" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -2, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0)
+omni_range = 15.0
+
+[node name="finalCutscene" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+script = ExtResource("3_1jolx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="finalCutscene"]
+shape = SubResource("BoxShape3D_bffx2")
+
+[node name="ColorRect" type="ColorRect" parent="finalCutscene"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("4_cognd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, 2)
+camera = NodePath("../Camera3D")
+
+[node name="Camera3D" parent="." node_paths=PackedStringArray("track") instance=ExtResource("5_shvgf")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1, 1, 2)
+track = NodePath("../Player")
+
+[connection signal="body_entered" from="finalCutscene" to="finalCutscene" method="_on_body_entered"]

@@ -6,7 +6,8 @@ var sections = [
 	"res://Scenes/Level 2.tscn",
 	"res://Scenes/Level 3.tscn",
 	"res://Scenes/Level 4.tscn",
-	"res://Scenes/Level Hard.tscn"
+	"res://Scenes/Level Hard.tscn",
+	"res://Scenes/Level outro.tscn"
 ]
 
 var currentMap
