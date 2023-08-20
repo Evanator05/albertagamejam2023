@@ -9,7 +9,7 @@ func _ready():
 	setColor(Color(0,1,0))
 	$interactArea.interacted.connect(interacted)
 
-func interacted(interacter):
+func interacted(_interacter):
 	isPressed = true
 	setColor(Color(1,0,0))
 	emit_signal("stateUpdated", isPressed)
@@ -22,5 +22,8 @@ func timerEnded():
 	emit_signal("stateUpdated", isPressed)
 
 func setColor(color:Color):
+	$MeshInstance3D.mesh = $MeshInstance3D.mesh.duplicate(true)
 	var mat:StandardMaterial3D = $MeshInstance3D.mesh.material
+	mat = mat.duplicate(true)
 	mat.albedo_color = color
+	$MeshInstance3D.mesh.material = mat

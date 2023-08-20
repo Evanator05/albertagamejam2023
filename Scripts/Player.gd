@@ -12,18 +12,29 @@ var instance
 
 var state:Callable
 
+var footsteptimer:float = 0
+
 func _ready():
+	Globals.refreshLevel.connect(resetAmmo)
 	state = alive
 	$UI.updateAmmo(ammo)
 
 func _process(delta):
 	$Label3D.visible = canInteract()
-	state.call()
+	state.call(delta)
 
-func alive():
+func alive(delta):
 	interact()
 	shoot()
 	var inputs:Vector2 = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
+	if inputs != Vector2.ZERO:
+		footsteptimer += delta
+		if footsteptimer > 0.3:
+			footsteptimer = 0
+			$AudioStreamPlayer3D.play()
+	else:
+		footsteptimer = 0
+	
 	var pos = getMousePos()
 	if not pos == null:
 		rotation.y = getAngle(pos)
@@ -31,17 +42,20 @@ func alive():
 	camera.offset.y = (getRoomSize()/2)+5
 	move_and_slide()
 
-func frozen(): # Elevator to the next level
+func frozen(_delta): # Elevator to the next level
 	camera.offset.y = (getRoomSize()/2)+5
 	move_and_slide()
 
-func dead():
+func dead(_delta):
 	pass
+
+func resetAmmo():
+	ammo = 5
+	$UI.updateAmmo(ammo)
 
 func die():
 	global_transform.origin = Globals.mapSections.respawnPoint
-	ammo = 5
-	$UI.updateAmmo(ammo)
+	resetAmmo()
 
 func getAngle(dir):
 	var pos = global_transform.origin

@@ -8,7 +8,7 @@ func _ready():
 		if child is PressButton:
 			child.stateUpdated.connect(stateUpdated)
 
-func stateUpdated(state):
+func stateUpdated(_state):
 	for child in get_children():
 		if not child.isPressed:
 			emit_signal("closed")

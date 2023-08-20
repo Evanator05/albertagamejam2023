@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dpikd35h2mjce"]
+[gd_scene load_steps=14 format=3 uid="uid://dpikd35h2mjce"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_7jwfk"]
 [ext_resource type="Texture2D" uid="uid://efkuxns0xqkx" path="res://Textures/player.png" id="2_jfjno"]
 [ext_resource type="PackedScene" uid="uid://bpodwf3jw3xts" path="res://Scenes/Gun.tscn" id="2_k5qpc"]
 [ext_resource type="PackedScene" uid="uid://bnv56a2ieppv7" path="res://Inventory/ui.tscn" id="4_ra060"]
+[ext_resource type="AudioStream" uid="uid://cv5hr4lcfsu3l" path="res://Audio/Footstep SFX.wav" id="5_oxfvw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6cjka"]
 
@@ -26,6 +27,11 @@ size = Vector2(100, 100)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cik6h"]
 size = Vector3(100, 1, 100)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qqusb"]
+streams_count = 1
+stream_0/stream = ExtResource("5_oxfvw")
+stream_0/weight = 1.0
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_7jwfk")
@@ -87,3 +93,7 @@ mesh = SubResource("PlaneMesh_kxyu2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_cik6h")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource("AudioStreamRandomizer_qqusb")
+max_polyphony = 6
