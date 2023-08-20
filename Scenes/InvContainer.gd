@@ -1,10 +1,14 @@
 extends GridContainer
 
+@onready var slot = preload("res://Inventory/Slot.tscn")
+var invSize = 3
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	for i in invSize:
+		var slotTemp = slot.instantiate()
+		add_child(slotTemp)
+	fillInventorySlots()
 
 func fillInventorySlots():
-	pass
+		pass
 	

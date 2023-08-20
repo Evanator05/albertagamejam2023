@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnv56a2ieppv7"]
+
+[ext_resource type="Script" path="res://Scenes/UI.gd" id="1_tp7bv"]
+[ext_resource type="Script" path="res://Scenes/InvContainer.gd" id="2_vitgr"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_tp7bv")
+
+[node name="Inventory" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InvContainer" type="GridContainer" parent="Inventory"]
+layout_mode = 1
+offset_left = 8.0
+offset_top = 424.0
+offset_right = 72.0
+offset_bottom = 636.0
+theme_override_constants/v_separation = 10
+script = ExtResource("2_vitgr")
