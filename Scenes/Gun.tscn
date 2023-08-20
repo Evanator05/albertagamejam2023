@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://bpodwf3jw3xts"]
+
+[ext_resource type="PackedScene" uid="uid://cuufp7qbewjlb" path="res://Models/Steampunk Rifle.glb" id="1_q43v6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aq8kt"]
+albedo_color = Color(0.470588, 0.596078, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ur1do"]
+albedo_color = Color(0.345098, 0.603922, 0.462745, 1)
+metallic = 1.0
+roughness = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcdsi"]
+albedo_color = Color(0.690196, 1, 0.956863, 1)
+metallic = 0.99
+metallic_specular = 0.53
+roughness = 0.4
+
+[sub_resource type="Animation" id="Animation_hm1o7"]
+resource_name = "Shooting"
+length = 0.1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.01, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.1), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fm7kp"]
+_data = {
+"Shooting": SubResource("Animation_hm1o7")
+}
+
+[node name="Gun" instance=ExtResource("1_q43v6")]
+
+[node name="Node" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
+surface_material_override/0 = SubResource("StandardMaterial3D_aq8kt")
+surface_material_override/1 = SubResource("StandardMaterial3D_ur1do")
+surface_material_override/2 = SubResource("StandardMaterial3D_tcdsi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_fm7kp")
+}
+
+[node name="RayCast3D" type="RayCast3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0144748, -0.00587869, -0.440726)
+target_position = Vector3(0, 0, -1)
