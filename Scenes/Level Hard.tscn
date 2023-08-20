@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="1_6qmls"]
 [ext_resource type="Script" path="res://Scripts/Level.gd" id="1_ew8gp"]
-[ext_resource type="Material" path="res://Materials/map.material" id="1_pln8i"]
+[ext_resource type="Material" uid="uid://dh40gfqmsavuk" path="res://Materials/map.material" id="1_pln8i"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_xttof"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_5c1lj"]
 [ext_resource type="PackedScene" uid="uid://cnq0cu8t4e7ww" path="res://Objects/Box.tscn" id="6_g8qsy"]
@@ -37,12 +37,12 @@ flip_faces = true
 size = Vector3(2, 10, 2)
 
 [node name="CSGBox3D43" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 20.8, 45)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 20.6, 45)
 flip_faces = true
 size = Vector3(2, 12, 2)
 
 [node name="CSGBox3D44" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 32.8, 45)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 32.4, 45)
 size = Vector3(14, 12, 14)
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
@@ -573,7 +573,7 @@ timerLength = 3.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 
 [node name="endPos" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 18.8, 49)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 26.4, 45)
 
 [node name="Elevator" parent="." instance=ExtResource("8_ek4nu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 16.71, 45)
