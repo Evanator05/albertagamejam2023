@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cg7oopycsvs03"]
+[gd_scene load_steps=11 format=3 uid="uid://cg7oopycsvs03"]
 
 [ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="1_4pxq8"]
 [ext_resource type="Material" uid="uid://dh40gfqmsavuk" path="res://Materials/map.material" id="1_fxhgy"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_w3tyi"]
 [ext_resource type="Script" path="res://Scripts/Light.gd" id="3_3k2du"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_o8pas"]
+[ext_resource type="Script" path="res://Scripts/LightFlicker.gd" id="4_ygjkn"]
 [ext_resource type="PackedScene" uid="uid://b2av77eexy866" path="res://Objects/Enemy.tscn" id="6_fqi7t"]
 [ext_resource type="PackedScene" uid="uid://bn5pu4gcmr0oj" path="res://Objects/Elevator.tscn" id="9_idell"]
 
@@ -160,11 +161,11 @@ script = ExtResource("3_3k2du")
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 15)
-script = ExtResource("3_3k2du")
+script = ExtResource("4_ygjkn")
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5)
-script = ExtResource("3_3k2du")
+script = ExtResource("4_ygjkn")
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -17)
@@ -172,7 +173,7 @@ script = ExtResource("3_3k2du")
 
 [node name="OmniLight3D7" type="OmniLight3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -11)
-script = ExtResource("3_3k2du")
+script = ExtResource("4_ygjkn")
 
 [node name="OmniLight3D8" type="OmniLight3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -11)
@@ -180,7 +181,7 @@ script = ExtResource("3_3k2du")
 
 [node name="OmniLight3D9" type="OmniLight3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -11)
-script = ExtResource("3_3k2du")
+script = ExtResource("4_ygjkn")
 
 [node name="OmniLight3D10" type="OmniLight3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -29)
@@ -196,7 +197,7 @@ script = ExtResource("3_3k2du")
 
 [node name="OmniLight3D13" type="OmniLight3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -28)
-script = ExtResource("3_3k2du")
+script = ExtResource("4_ygjkn")
 
 [node name="OmniLight3D14" type="OmniLight3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -35)
