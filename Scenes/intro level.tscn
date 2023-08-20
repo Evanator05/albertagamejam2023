@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dvxi3tlovt3j2"]
 
-[ext_resource type="PackedScene" path="res://Objects/Door.tscn" id="1_wn65x"]
+[ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="1_wn65x"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_3byu8"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_sdh0m"]
 [ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="4_qupx1"]
@@ -55,6 +55,7 @@ camera = NodePath("../Camera3D")
 
 [node name="Camera3D" parent="." node_paths=PackedStringArray("track") instance=ExtResource("5_ols7f")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4, 2, 3)
+current = false
 track = NodePath("../Player")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]

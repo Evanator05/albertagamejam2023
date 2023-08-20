@@ -5,7 +5,7 @@ var levels = [
 	preload("res://Scenes/Level.tscn"),
 	preload("res://Scenes/Level 1.tscn"),
 	preload("res://Scenes/Level 2.tscn"),
-	preload("res://Scenes/Level 3.tscn")
+	preload("res://Scenes/Level 4.tscn")
 ];
 
 func nextLevel():

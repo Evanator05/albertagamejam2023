@@ -83,14 +83,14 @@ listenFor = NodePath("../MultiButton")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.17861, 0, -2.88549)
 
 [node name="Button" parent="NavigationRegion3D/MultiButton" instance=ExtResource("3_rh07f")]
-transform = Transform3D(2.735, 0, 0, 0, 0.21, 0, 0, 0, 0.385, 2.82139, -1, -0.114511)
+transform = Transform3D(2.51, 0, 0, 0, 0.21, 0, 0, 0, 0.385, 2.82139, -1, -0.114511)
 timerLength = 3.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27.3424)
 
 [node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("4_o6sbw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0441198, 9.53674e-07, 5.1498)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0441198, 9.53674e-07, 4.6498)
 camera = NodePath("../Camera3D")
 
 [node name="Camera3D" parent="." node_paths=PackedStringArray("track") instance=ExtResource("5_c3g07")]
