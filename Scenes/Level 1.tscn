@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dy113xuu4ucfy"]
+[gd_scene load_steps=8 format=3 uid="uid://ckmyf2lsejipk"]
 
 [ext_resource type="PackedScene" path="res://Objects/Door.tscn" id="1_7ieoh"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_dn6g6"]
