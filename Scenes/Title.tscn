@@ -94,7 +94,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_iw7e8")
 text = "Though your cover was blown by an enemy drone 
-during \"Operation Eggplant\", the mission isn't over! 
+during Operation \"I Spy,\" the mission isn't over! 
 With minimal bullets left in your chamber, you must 
 now stealthily fight your way through enemy 
 headquarters and escape with the asset.
