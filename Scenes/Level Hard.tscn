@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dtlet7u1nv4ut"]
+
+[node name="Level Hard" type="Node3D"]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+size = Vector3(1, 0.002, 1)
