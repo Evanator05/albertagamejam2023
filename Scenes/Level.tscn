@@ -5,15 +5,20 @@
 [ext_resource type="Environment" uid="uid://d4bjpaqvvdoua" path="res://Environment.tres" id="1_usrg6"]
 [ext_resource type="Material" uid="uid://blsyleb4hu5g2" path="res://Materials/concrete.material" id="2_m8iry"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="4_gk0ah"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://ccoersjsjhk7s" path="res://Objects/Camera.tscn" id="5_f3vmu"]
 [ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="5_hsegn"]
+=======
+[ext_resource type="PackedScene" path="res://Objects/Camera.tscn" id="5_f3vmu"]
+[ext_resource type="PackedScene" path="res://Objects/Door.tscn" id="5_hsegn"]
+>>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="5_nq42l"]
 [ext_resource type="PackedScene" uid="uid://cnq0cu8t4e7ww" path="res://Objects/Box.tscn" id="8_48acx"]
 [ext_resource type="Texture2D" uid="uid://c0x103i73yd21" path="res://Textures/Exit Texture ( detailed ).png" id="9_88ykb"]
 [ext_resource type="Script" path="res://Scenes/UI.gd" id="10_unbmj"]
 [ext_resource type="Script" path="res://Scenes/InvContainer.gd" id="11_8cea3"]
 [ext_resource type="PackedScene" uid="uid://cg5is6bo5csdd" path="res://Inventory/Slot.tscn" id="11_r2b1a"]
-[ext_resource type="PackedScene" uid="uid://bn5pu4gcmr0oj" path="res://Objects/Elevator.tscn" id="12_u71sj"]
+[ext_resource type="PackedScene" path="res://Objects/Elevator.tscn" id="12_u71sj"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_83wvj"]
 vertices = PackedVector3Array(-24.75, -2, -35.75, -32.75, -2, -35.75, -32.75, -2, -26.5, 33, -2, -26.5, 33, -2, -35.75, 24.75, -2, -35.75, -32.75, -2, -7.75, -32.75, -2, 1.75, -24.75, -2, 1.75, 24.75, -2, 1.75, 33, -2, 1.75, 33, -2, -7.75, -16.5, -2, -35.75, -24.75, -2, -35.75, -32.75, -2, -26.5, -32.75, -2, -7.75, -24.75, -2, 1.75, -16.5, -2, 1.75, 33, -2, -26.5, 24.75, -2, -35.75, 16.5, -2, -35.75, 16.5, -2, 1.75, 24.75, -2, 1.75, 33, -2, -7.75, -32.75, -2, -17, -32.75, -2, -7.75, -16.5, -2, 1.75, -8.25, -2, 1.75, -16.5, -2, -35.75, -32.75, -2, -26.5, -32.75, -2, -17, -8.25, -2, -35.75, 16.5, -2, 1.75, 33, -2, -7.75, 33, -2, -17, 8.25, -2, 1.75, 33, -2, -17, 33, -2, -26.5, 16.5, -2, -35.75, 8.25, -2, -35.75, 8.25, -2, 1.75, 33, -2, -17, 8.25, -2, -35.75, 0, -2, -35.75, 0, -2, 1.75, -8.25, -2, -35.75, -32.75, -2, -17, -8.25, -2, 1.75, 0, -2, 1.75, 0, -2, -35.75)
