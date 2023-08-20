@@ -1,10 +1,235 @@
-[gd_scene format=3 uid="uid://dtlet7u1nv4ut"]
+[gd_scene load_steps=6 format=3 uid="uid://dtlet7u1nv4ut"]
+
+[ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="1_6qmls"]
+[ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_xttof"]
+[ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_5c1lj"]
+[ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="4_dqswf"]
+[ext_resource type="PackedScene" uid="uid://ccoersjsjhk7s" path="res://Objects/Camera.tscn" id="5_0p8i0"]
 
 [node name="Level Hard" type="Node3D"]
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D"]
+use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-size = Vector3(1, 0.002, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 0)
+flip_faces = true
+size = Vector3(8, 4, 8)
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2, -2)
+flip_faces = true
+size = Vector3(10, 4, 34)
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(-0.657609, 0, 0.707107, 0, 1, 0, -0.657609, 0, -0.707107, -38, 2, 20.23)
+flip_faces = true
+size = Vector3(10, 4, 40)
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(-0.245052, 0, 0.962218, 0, 1, 0, -0.865996, 0, -0.27228, -21.68, 2, 13.6)
+flip_faces = true
+size = Vector3(12, 4, 28)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 2, -35)
+flip_faces = true
+size = Vector3(42, 4, 8)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, -0.022624, -13.8793)
+visible = false
+flip_faces = true
+size = Vector3(220, 0.002, 114)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5, 2, -30)
+flip_faces = true
+size = Vector3(18, 4, 8)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -61, 2, 9)
+flip_faces = true
+size = Vector3(34, 4, 22)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 0)
+flip_faces = true
+size = Vector3(4, 4, 4)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2, -45)
+flip_faces = true
+size = Vector3(8, 4, 8)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 2, -54)
+flip_faces = true
+size = Vector3(6, 4, 6)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2, -45)
+flip_faces = true
+size = Vector3(4, 4, 4)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 2, -54)
+flip_faces = true
+size = Vector3(4, 4, 4)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -60, 2, -6)
+flip_faces = true
+size = Vector3(8, 4, 4)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -49, 2, 21)
+flip_faces = true
+size = Vector3(4, 4, 6)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, -21)
+flip_faces = true
+size = Vector3(4, 4, 4)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43, 2, -35)
+flip_faces = true
+size = Vector3(4, 4, 4)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -13)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 11)
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 13)
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 0, 25)
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57, 0, 23)
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 3)
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76, 0, 5)
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47, 0, 13)
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67, 0, 14)
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65, 0, -6)
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -27)
+
+[node name="OmniLight3D18" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -54)
+
+[node name="OmniLight3D19" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -45)
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -35)
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, -35)
+
+[node name="OmniLight3D17" type="OmniLight3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, -35)
+
+[node name="door" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_6qmls")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+listenFor = NodePath("../MultiButton")
+
+[node name="MultiButton" parent="." instance=ExtResource("2_xttof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="Button" parent="MultiButton" instance=ExtResource("3_5c1lj")]
+transform = Transform3D(-1.61732e-08, -1.475, 0, 0.37, -6.44743e-08, 0, 0, 0, 0.355, -2.007, 1.121, -3.553)
+timerLength = 3.0
+
+[node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("4_dqswf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 0)
+camera = NodePath("../Camera3D")
+
+[node name="Camera3D" parent="." node_paths=PackedStringArray("track") instance=ExtResource("5_0p8i0")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 6, 3, 0)
+track = NodePath("../Player")
+
+[node name="door2" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_6qmls")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -20)
+listenFor = NodePath("../MultiButton")
+
+[node name="door3" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_6qmls")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -44, 0, -35)
+listenFor = NodePath("../MultiButton3")
+
+[node name="MultiButton2" parent="." instance=ExtResource("2_xttof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -16)
+
+[node name="Button" parent="MultiButton2" instance=ExtResource("3_5c1lj")]
+transform = Transform3D(0.37, 0, 0, 0, -1.17584e-07, -0.37, 0, 2.69, -1.61732e-08, 16, 1, -3)
+timerLength = 3.0
+
+[node name="MultiButton3" parent="." instance=ExtResource("2_xttof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -17)
+
+[node name="Button2" parent="MultiButton3" instance=ExtResource("3_5c1lj")]
+transform = Transform3D(-1.61732e-08, -2.35, 0, 0.37, -1.02722e-07, 0, 0, 0, 0.37, -27, 1, -15)
+timerLength = 3.0
+
+[node name="door4" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_6qmls")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 0, -45)
+listenFor = NodePath("../MultiButton5")
+
+[node name="MultiButton5" parent="." instance=ExtResource("2_xttof")]
+transform = Transform3D(-7.43094e-09, -2.225, 0, 0.17, -9.72578e-08, 0, 0, 0, 0.17, 9.1816, 1, -42)
+
+[node name="Button" parent="MultiButton5" instance=ExtResource("3_5c1lj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="door5" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_6qmls")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11, 0, -54)
+listenFor = NodePath("../MultiButton4")
+
+[node name="MultiButton4" parent="." instance=ExtResource("2_xttof")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9, 0, -54)
+
+[node name="Button2" parent="MultiButton4" instance=ExtResource("3_5c1lj")]
+transform = Transform3D(4.01244e-16, 1.07093e-07, -0.195, 0.21, -1.07093e-07, 0, -9.17939e-09, -2.45, -8.52372e-09, -2.555, 2, 2)
+
+[node name="door6" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_6qmls")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -48, 0, 22)
+listenFor = NodePath("../MultiButton6")
+
+[node name="MultiButton6" parent="." instance=ExtResource("2_xttof")]
+
+[node name="Button" parent="MultiButton6" instance=ExtResource("3_5c1lj")]
+transform = Transform3D(1.89505, 0, -0.13435, 0, 0.1, 0, 1.89505, 0, 0.13435, -50.55, 2, 24)
+timerLength = 3.0
+
+[node name="door7" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_6qmls")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -59, 0, -7)
+listenFor = NodePath("../MultiButton7")
+
+[node name="MultiButton7" parent="." instance=ExtResource("2_xttof")]
+transform = Transform3D(2.16374e-09, 2.05415, -0.155563, 0.22, -1.26982e-07, -6.55651e-09, -1.1436e-08, -2.05415, -0.155563, -60.5, 1.995, -9.37)
+
+[node name="Button" parent="MultiButton7" instance=ExtResource("3_5c1lj")]
+transform = Transform3D(1, 0, 0, -4.44089e-16, 1, 0, 0, 0, 1, 0, 0, 0)
