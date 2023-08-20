@@ -8,4 +8,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	light_color = Color(0.941, 0.635, 0.102, 0.78)
+	light_color = Globals.colors[Globals.mapSections.currentLevel]

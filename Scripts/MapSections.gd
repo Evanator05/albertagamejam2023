@@ -13,12 +13,16 @@ var sections = [
 var currentMap
 var respawnPoint:Vector3
 var firstMap = true
+var currentLevel = 0
 
 func _ready():
 	Globals.mapSections = self
 	loadSection(0)
+	
+	
 
 func loadSection(index:int):
+	currentLevel = index
 	var mapScene:Resource = load(sections[index])
 	var mapInst = mapScene.instantiate()
 	add_child(mapInst)
