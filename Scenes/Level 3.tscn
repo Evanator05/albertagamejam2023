@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bi66hobgyprrm"]
+
+[node name="Level 3" type="Node3D"]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+flip_faces = true
+size = Vector3(2, 2, 2)

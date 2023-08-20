@@ -15,6 +15,15 @@ run/main_scene="res://Scenes/Level.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Inventory="*res://Scripts/Inventory.gd"
+Levels="*res://Scripts/Levels.gd"
+
+[dotnet]
+
+project/assembly_name="AlbertaGameJam2023"
+
 [input]
 
 moveUp={
