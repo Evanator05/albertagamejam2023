@@ -88,7 +88,11 @@ func _on_body_part_hit(dam):
 	health -= dam
 	#var moveDir:Vector3 = nextPoint-global_transform.origin
 	if health <= 0:
-		speed = 0	
-		get_tree().create_timer(5.0).timeout.connect(func():speed = 6)
+		speed = 0
+		$die/CollisionShape3D.disabled = true
+		get_tree().create_timer(5.0).timeout.connect(func(): 
+			speed = 6
+			$die/CollisionShape3D.disabled = false
+			)
 		move_and_slide()
 		
