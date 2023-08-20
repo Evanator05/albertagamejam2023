@@ -40,6 +40,8 @@ func dead():
 
 func die():
 	global_transform.origin = Globals.mapSections.respawnPoint
+	ammo = 4
+	$UI.updateAmmo(ammo)
 
 func getAngle(dir):
 	var pos = global_transform.origin

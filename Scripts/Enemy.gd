@@ -25,6 +25,8 @@ enum {PATROL, ALERT}
 signal body_part_hit(dam)
 
 func _ready():
+	Globals.refreshLevel.connect(func(): state = PATROL)
+	
 	setTarget(target)
 	await get_tree().process_frame #wait until the next frame to start the path
 	getNextPoint()
@@ -78,8 +80,8 @@ func _on_spot_area_body_entered(body):
 
 func _on_die_area_body_entered(body):
 	if (body is Player and state == ALERT):
-		state = PATROL
 		body.die()
+		Globals.emit_signal("refreshLevel")
 
 func hit():
 	emit_signal("body_part_hit", damage)
