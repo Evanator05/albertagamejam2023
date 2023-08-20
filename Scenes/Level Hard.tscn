@@ -660,3 +660,82 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.95673, 0, -15.4552)
 
 [node name="Node3D5" type="Node3D" parent="Guard 5 path"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.4509, 0, -29.1971)
+
+[node name="Guard 6" parent="." node_paths=PackedStringArray("target", "patrolPath") instance=ExtResource("9_g1fgj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 0, -57)
+target = NodePath("../Guard 6 path")
+patrolPath = [NodePath("../Guard 6 path/Node3D"), NodePath("../Guard 6 path/Node3D2")]
+
+[node name="Guard 6 path" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15, 0, -57)
+
+[node name="Node3D" type="Node3D" parent="Guard 6 path"]
+
+[node name="Node3D2" type="Node3D" parent="Guard 6 path"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[node name="Guard 7" parent="." node_paths=PackedStringArray("target", "patrolPath") instance=ExtResource("9_g1fgj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.0882, 0, -65.433)
+target = NodePath("../Guard 7 path")
+patrolPath = [NodePath("../Guard 7 path/Node3D"), NodePath("../Guard 7 path/Node3D2"), NodePath("../Guard 7 path/Node3D3")]
+
+[node name="Guard 7 path" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.0882, 0, -65.433)
+
+[node name="Node3D" type="Node3D" parent="Guard 7 path"]
+
+[node name="Node3D2" type="Node3D" parent="Guard 7 path"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+
+[node name="Node3D3" type="Node3D" parent="Guard 7 path"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 9)
+
+[node name="Guard 8" parent="." node_paths=PackedStringArray("target", "patrolPath") instance=ExtResource("9_g1fgj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14, 0, -59)
+target = NodePath("../Guard 8 path")
+patrolPath = [NodePath("../Guard 8 path/Node3D"), NodePath("../Guard 8 path/Node3D2"), NodePath("../Guard 8 path/Node3D3")]
+
+[node name="Guard 8 path" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 0, -59)
+
+[node name="Node3D" type="Node3D" parent="Guard 8 path"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 0)
+
+[node name="Node3D2" type="Node3D" parent="Guard 8 path"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 0)
+
+[node name="Node3D3" type="Node3D" parent="Guard 8 path"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 14)
+
+[node name="Guard 9" parent="." node_paths=PackedStringArray("target", "patrolPath") instance=ExtResource("9_g1fgj")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -92, 0, -72)
+target = NodePath("../Guard 9 path")
+patrolPath = [NodePath("../Guard 9 path/Node3D"), NodePath("../Guard 9 path/Node3D2")]
+
+[node name="Guard 9 path" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92, 0, -61)
+
+[node name="Node3D" type="Node3D" parent="Guard 9 path"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11)
+
+[node name="Node3D2" type="Node3D" parent="Guard 9 path"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+
+[node name="Guard 10" parent="." node_paths=PackedStringArray("target", "patrolPath") instance=ExtResource("9_g1fgj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 0, 7)
+target = NodePath("../Guard 10 path")
+patrolPath = [NodePath("../Guard 10 path/Node3D"), NodePath("../Guard 10 path/Node3D2"), NodePath("../Guard 10 path/Node3D3"), NodePath("../Guard 10 path/Node3D4")]
+
+[node name="Guard 10 path" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27, 0, 7)
+
+[node name="Node3D" type="Node3D" parent="Guard 10 path"]
+
+[node name="Node3D2" type="Node3D" parent="Guard 10 path"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9)
+
+[node name="Node3D3" type="Node3D" parent="Guard 10 path"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 12)
+
+[node name="Node3D4" type="Node3D" parent="Guard 10 path"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, 19)

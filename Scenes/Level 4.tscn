@@ -384,7 +384,6 @@ timerLength = 3.0
 
 [node name="Button" parent="MultiButton4" instance=ExtResource("3_b5cxu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1, -4)
-timerLength = 45.0
 
 [node name="MultiButton5" parent="." instance=ExtResource("2_5unpc")]
 
@@ -406,7 +405,6 @@ transform = Transform3D(0.38, 0, 0, 0, 0.175, 0, 0, 0, 0.4, 51, -1, 30)
 
 [node name="Button" parent="MultiButton8" instance=ExtResource("3_b5cxu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -1, -7)
-timerLength = 45.0
 
 [node name="MultiButton9" parent="." instance=ExtResource("2_5unpc")]
 
