@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bn5pu4gcmr0oj"]
+[gd_scene load_steps=8 format=3 uid="uid://bn5pu4gcmr0oj"]
 
 [ext_resource type="Script" path="res://Objects/Elevator.gd" id="1_8xwgw"]
 [ext_resource type="Texture2D" uid="uid://c0x103i73yd21" path="res://Textures/Exit Texture ( detailed ).png" id="2_grhr3"]
+[ext_resource type="AudioStream" uid="uid://d1v8jm3agaaug" path="res://Audio/Music/Elevator_Music.mp3" id="3_dykgm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cn030"]
 albedo_texture = ExtResource("2_grhr3")
@@ -35,5 +36,10 @@ shape = SubResource("BoxShape3D_fvgvu")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DetectArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_fp71v")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_dykgm")
+autoplay = true
+max_distance = 5.0
 
 [connection signal="body_entered" from="DetectArea" to="." method="_on_detect_area_body_entered"]
