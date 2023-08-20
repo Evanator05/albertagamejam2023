@@ -1,0 +1,145 @@
+[gd_scene load_steps=7 format=3 uid="uid://4bhkhqjr3j2x"]
+
+[ext_resource type="Texture2D" uid="uid://fdaiu8f207sy" path="res://Textures/endsplash.png" id="1_2c3v1"]
+[ext_resource type="Script" path="res://Scenes/End.gd" id="1_jbdtj"]
+
+[sub_resource type="Theme" id="Theme_drsbp"]
+default_font_size = 30
+
+[sub_resource type="Theme" id="Theme_k3sxx"]
+default_font_size = 30
+
+[sub_resource type="Theme" id="Theme_jtcoi"]
+default_font_size = 30
+
+[sub_resource type="Theme" id="Theme_e6nts"]
+default_font_size = 30
+
+[node name="End" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jbdtj")
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2c3v1")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -119.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_drsbp")
+text = "\"Oh no, he's loose! The asset is loose!\""
+horizontal_alignment = 1
+
+[node name="BlackRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -69.5
+offset_top = -64.0
+offset_right = 69.5
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_k3sxx")
+text = "Go home"
+
+[node name="WhiteRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EndMusic" type="AudioStreamPlayer" parent="."]
+
+[node name="Credits" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -26.0
+offset_right = 27.5
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_jtcoi")
+text = "Thank you for playing :^)
+
+Credits
+
+Hugh Bagan - Producer
+Aiden Collins-Cruickshank - Musician
+Colton Luo - Programmer, Tester
+Evan - Programmer
+Rei - Game Designer
+Achyuth Rajagopalan - Level Designer, 3D Artist
+Haley Skjersven - Writer
+Elliot Snyder - Artist
+Aaliyah Wusu - Programmer, Tester"
+horizontal_alignment = 1
+
+[node name="TitleButton" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -21.0
+offset_top = -87.0
+offset_right = 21.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_e6nts")
+text = "Quit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TitleButton" to="." method="_on_title_button_pressed"]
