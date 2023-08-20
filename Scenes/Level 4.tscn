@@ -107,7 +107,7 @@ size = Vector3(4, 4, 28.1811)
 [node name="CSGBox3D9" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 42, 0, 1.91546)
 flip_faces = true
-size = Vector3(4, 4, 36)
+size = Vector3(4, 3.585, 36)
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4, 0, 22)
@@ -185,7 +185,7 @@ flip_faces = true
 size = Vector3(4, 4, 10)
 
 [node name="CSGBox3D32" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(1.31106e-07, 0.020576, 0.999788, -2.69821e-09, 0.999788, -0.020576, -1, 0, 1.31134e-07, 48.9979, 0, 18)
+transform = Transform3D(7.54424e-08, 0.0185184, 0.999788, -2.69821e-09, 0.899809, -0.020576, -1, -1.0308e-09, 7.54819e-08, 48.998, -0.09, 18)
 flip_faces = true
 size = Vector3(4, 4, 18)
 
