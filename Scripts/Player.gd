@@ -4,6 +4,11 @@ var maxSpeed:float = 8
 
 @export var camera:Camera3D
 
+@onready var gun_anim = $Gun/AnimationPlayer
+@onready var gun_barrel = $Gun/RayCast3D
+var bullet = load("res://Scenes/bullet.tscn")
+var instance
+
 var state:Callable
 
 func _ready():
@@ -15,11 +20,11 @@ func _process(delta):
 
 func alive():
 	interact()
+	shoot()
 	var inputs:Vector2 = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
-	if inputs != Vector2.ZERO:
-		var pos = getMousePos()
-		if not pos == null:
-			rotation.y = getAngle(pos)
+	var pos = getMousePos()
+	if not pos == null:
+		rotation.y = getAngle(pos)
 	velocity = Vector3(inputs.x, 0, inputs.y)*maxSpeed
 	camera.offset.y = (getRoomSize()/2)+5
 	move_and_slide()
@@ -71,6 +76,17 @@ func getMousePos():
 		return look_at_me
 	else:
 		return null
+		
+func shoot():
+	if Input.is_action_just_pressed("shoot"):
+		if !gun_anim.is_playing():
+			gun_anim.play("Shooting")
+			instance = bullet.instantiate()
+			instance.position = gun_barrel.global_position
+			instance.transform.basis = gun_barrel.global_transform.basis
+			get_parent().add_child(instance)
+			
+	
 
 func getRoomSize():
 	$Raycasts.global_transform.origin = global_transform.origin

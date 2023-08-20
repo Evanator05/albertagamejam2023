@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvmtp14hj0n8j"]
+
+[ext_resource type="Script" path="res://Scripts/MusicManager.gd" id="1_yvesq"]
+
+[node name="MusicManager" type="Node"]
+script = ExtResource("1_yvesq")
+
+[node name="main" type="AudioStreamPlayer" parent="."]
+volume_db = -80.0
+
+[node name="danger" type="AudioStreamPlayer" parent="."]
+volume_db = -80.0

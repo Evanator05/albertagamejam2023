@@ -9,5 +9,6 @@ var levels = [
 ];
 
 func nextLevel():
+	print(currentLevel, levels[currentLevel])
 	currentLevel+=1;
 	get_tree().change_scene_to_packed(levels[currentLevel])

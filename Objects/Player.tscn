@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dpikd35h2mjce"]
+[gd_scene load_steps=8 format=3 uid="uid://dpikd35h2mjce"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_7jwfk"]
 [ext_resource type="Texture2D" uid="uid://efkuxns0xqkx" path="res://Textures/player.png" id="2_jfjno"]
+[ext_resource type="PackedScene" uid="uid://bpodwf3jw3xts" path="res://Scenes/Gun.tscn" id="2_k5qpc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6cjka"]
 
@@ -60,3 +61,6 @@ mesh = SubResource("PlaneMesh_4akqu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 light_energy = 0.2
 omni_range = 2.0
+
+[node name="Gun" parent="." instance=ExtResource("2_k5qpc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.463257, 0, -0.31466)
