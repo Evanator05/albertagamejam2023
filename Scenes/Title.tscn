@@ -1,13 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bi3mac4aqpu4n"]
+[gd_scene load_steps=7 format=3 uid="uid://bi3mac4aqpu4n"]
 
 [ext_resource type="Script" path="res://Scenes/Title.gd" id="1_m6rwx"]
-[ext_resource type="Texture2D" uid="uid://cw6nuvnnnk7b4" path="res://Textures/titlesplash.png" id="1_yay6o"]
 [ext_resource type="Texture2D" uid="uid://du31ku7lfm6kn" path="res://Textures/start.png" id="2_d5w48"]
+[ext_resource type="Texture2D" uid="uid://sg68u83vfl5e" path="res://Textures/background.png" id="2_g0o6k"]
 [ext_resource type="Texture2D" uid="uid://be4qbg3jaijko" path="res://Textures/start_clicked.png" id="3_1vnxv"]
 [ext_resource type="AudioStream" uid="uid://dutb7t4431yxx" path="res://Audio/Music/Title Screen_easy loopable.mp3" id="5_ys5yg"]
-
-[sub_resource type="Theme" id="Theme_yaads"]
-default_font_size = 60
 
 [sub_resource type="Theme" id="Theme_iw7e8"]
 default_font_size = 30
@@ -28,30 +25,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_yay6o")
-expand_mode = 3
-stretch_mode = 3
-
-[node name="Label2" type="Label" parent="."]
-modulate = Color(0, 0, 0, 1)
-self_modulate = Color(0, 0, 0, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 82.0
-offset_top = -300.0
-offset_right = 236.0
-offset_bottom = 44.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = SubResource("Theme_yaads")
-text = "   SPY
-  ON
- THE
-FLY"
+texture = ExtResource("2_g0o6k")
+expand_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="."]
 layout_mode = 1

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://4bhkhqjr3j2x"]
+[gd_scene load_steps=8 format=3 uid="uid://4bhkhqjr3j2x"]
 
 [ext_resource type="Texture2D" uid="uid://fdaiu8f207sy" path="res://Textures/endsplash.png" id="1_2c3v1"]
 [ext_resource type="Script" path="res://Scenes/End.gd" id="1_jbdtj"]
+[ext_resource type="AudioStream" uid="uid://by4syxgh11p83" path="res://Audio/Music/Credits.mp3" id="3_owdkh"]
 
 [sub_resource type="Theme" id="Theme_drsbp"]
 default_font_size = 30
@@ -93,6 +94,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="EndMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_owdkh")
 
 [node name="Credits" type="Label" parent="."]
 visible = false

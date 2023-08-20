@@ -16,4 +16,4 @@ func open():
 func close():
 	var tween = get_tree().create_tween()
 	tween.tween_property($StaticBody3D, "position:y", 0, 0.5)
-	$AudioStreamPlayer3D.play()
+	$AudioStreamPlayer3D2.play()
