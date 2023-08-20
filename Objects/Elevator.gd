@@ -7,7 +7,7 @@ func _on_detect_area_body_entered(body):
 	if used: return
 	if (body is Player):
 		used = true
-		Globals.musicManager.changeSong("res://Audio/Music/Elevator_Music.mp3", "res://Audio/Music/Elevator_Music.mp3")
+		Globals.musicManager.changeSong("res://Audio/Music/Elevator Music and Ding.mp3", "res://Audio/Music/Elevator Music and Ding.mp3")
 		Globals.musicManager.changeTrack(0)
 		Globals.mapSections.loadSection(levelId)
 		# Go to next Level
