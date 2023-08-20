@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://ckmyf2lsejipk"]
+[gd_scene load_steps=11 format=3 uid="uid://ckmyf2lsejipk"]
 
 [ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="1_7ieoh"]
+[ext_resource type="Material" uid="uid://dh40gfqmsavuk" path="res://Materials/map.material" id="1_i2ft6"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_dn6g6"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_rh07f"]
 [ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="4_o6sbw"]
-[ext_resource type="PackedScene" path="res://Objects/Camera.tscn" id="5_c3g07"]
+[ext_resource type="PackedScene" uid="uid://ccoersjsjhk7s" path="res://Objects/Camera.tscn" id="5_c3g07"]
 [ext_resource type="PackedScene" uid="uid://b2av77eexy866" path="res://Objects/Enemy.tscn" id="6_lsk83"]
 [ext_resource type="PackedScene" uid="uid://c20qyuf4oita8" path="res://Objects/Exit.tscn" id="7_p0abd"]
 [ext_resource type="PackedScene" uid="uid://bn5pu4gcmr0oj" path="res://Objects/Elevator.tscn" id="8_e2j43"]
@@ -20,6 +21,7 @@ agent_radius = 1.0
 navigation_mesh = SubResource("NavigationMesh_hwf4j")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D"]
+material_override = ExtResource("1_i2ft6")
 use_collision = true
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]

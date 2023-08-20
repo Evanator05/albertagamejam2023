@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bi66hobgyprrm"]
+[gd_scene load_steps=9 format=3 uid="uid://bi66hobgyprrm"]
 
 [ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="1_0ef3s"]
+[ext_resource type="Material" uid="uid://dh40gfqmsavuk" path="res://Materials/map.material" id="1_vcllc"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_5unpc"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_b5cxu"]
 [ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="4_3o4sd"]
@@ -18,6 +19,7 @@ agent_radius = 1.0
 navigation_mesh = SubResource("NavigationMesh_jp448")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D"]
+material_override = ExtResource("1_vcllc")
 use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
