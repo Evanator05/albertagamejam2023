@@ -20,6 +20,10 @@ var currentPoint:int = 0 :
 var state = PATROL
 enum {PATROL, ALERT}
 
+@export var damage = 1
+@export var health = 1
+signal body_part_hit(dam)
+
 func _ready():
 	setTarget(target)
 	await get_tree().process_frame #wait until the next frame to start the path
@@ -39,8 +43,10 @@ func _process(delta):
 			currentPoint += 1
 		getNextPoint()
 	moveDir = moveDir.normalized()
-	velocity = moveDir*speed
+	velocity = moveDir*speed		
 	move_and_slide()
+
+
 
 func setTarget(t:Node3D):
 	target = t
@@ -75,3 +81,16 @@ func _on_spot_area_body_entered(body):
 func _on_die_area_body_entered(body):
 	if (body.get_name() == "Player" and state == ALERT):
 		get_tree().reload_current_scene()
+
+
+func hit():
+	emit_signal("body_part_hit", damage)
+
+func _on_body_part_hit(dam):
+	health -= dam
+	#var moveDir:Vector3 = nextPoint-global_transform.origin
+	if health <= 0:
+		speed = 0	
+		get_tree().create_timer(5.0).timeout.connect(func():speed = 6)
+		move_and_slide()
+		
