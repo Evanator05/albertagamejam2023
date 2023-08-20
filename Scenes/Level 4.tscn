@@ -427,7 +427,7 @@ timerLength = 3.0
 transform = Transform3D(0.145, 1.08717e-08, 0, -2.18944e-08, 0.072, 0, 0, 0, -2.39, 18, 0, 30)
 
 [node name="Guard 1" parent="." node_paths=PackedStringArray("target", "patrolPath") instance=ExtResource("6_fsayn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, -2, 7)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -24, -2, 7)
 target = NodePath("../Guard 1 path")
 patrolPath = [NodePath("../Guard 1 path/Node3D"), NodePath("../Guard 1 path/Node3D2"), NodePath("../Guard 1 path/Node3D3")]
 

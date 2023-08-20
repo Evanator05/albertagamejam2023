@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b4wt6ch0fhyvh"]
 
-[ext_resource type="Material" uid="uid://dh40gfqmsavuk" path="res://Materials/map.material" id="1_n0tc3"]
+[ext_resource type="Material" path="res://Materials/map.material" id="1_n0tc3"]
 [ext_resource type="Script" path="res://Scripts/Level.gd" id="1_yq4bi"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_alxov"]
 [ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="2_c024h"]
