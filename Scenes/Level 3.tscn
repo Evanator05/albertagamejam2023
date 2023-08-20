@@ -202,7 +202,7 @@ listenFor = NodePath("../MultiButton")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 1)
 
 [node name="Button" parent="MultiButton" instance=ExtResource("3_o8pas")]
-transform = Transform3D(0.745, 0, 0, 0, -1.19551e-07, -1, 0, 2.735, -4.37114e-08, 0.918586, -0.5, 7.85302)
+transform = Transform3D(0.435, 0, 0, 0, -1.19551e-07, -0.375, 0, 2.735, -1.63918e-08, 0.918586, -0.5, 7.85302)
 timerLength = 3.0
 
 [node name="door2" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_4pxq8")]
@@ -213,7 +213,7 @@ listenFor = NodePath("../MultiButton2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0937, 0.709623, 0.5)
 
 [node name="Button" parent="MultiButton2" instance=ExtResource("3_o8pas")]
-transform = Transform3D(1, 0, 0, 0, -9.09197e-08, -1, 0, 2.08, -4.37114e-08, 3.936, -0.445, -1.032)
+transform = Transform3D(0.545, 0, 0, 0, -9.09197e-08, -0.435, 0, 2.08, -1.90145e-08, 3.936, -0.445, -1.032)
 timerLength = 3.0
 
 [node name="door3" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_4pxq8")]
