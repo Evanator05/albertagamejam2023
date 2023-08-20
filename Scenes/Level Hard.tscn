@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="1_6qmls"]
 [ext_resource type="Script" path="res://Scripts/Level.gd" id="1_ew8gp"]
-[ext_resource type="Material" uid="uid://dh40gfqmsavuk" path="res://Materials/map.material" id="1_pln8i"]
+[ext_resource type="Material" path="res://Materials/map.material" id="1_pln8i"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_xttof"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_5c1lj"]
 [ext_resource type="PackedScene" uid="uid://cnq0cu8t4e7ww" path="res://Objects/Box.tscn" id="6_g8qsy"]
@@ -37,12 +37,12 @@ flip_faces = true
 size = Vector3(2, 10, 2)
 
 [node name="CSGBox3D43" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 12.8, 49)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 20.8, 45)
 flip_faces = true
 size = Vector3(2, 12, 2)
 
 [node name="CSGBox3D44" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 24.8, 49)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 32.8, 45)
 size = Vector3(14, 12, 14)
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
@@ -102,12 +102,12 @@ flip_faces = true
 size = Vector3(34, 4, 8)
 
 [node name="CSGBox3D38" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 0.96, 0, -1, 0, -4.37114e-08, -39.46, 10.74, 35.76)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 0.96, 0, -1, 0, -4.37114e-08, -39.46, 18.505, 31.455)
 flip_faces = true
 size = Vector3(12, 4, 8)
 
 [node name="CSGBox3D37" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, -0.258819, 0.965926, -1.13133e-08, -0.965926, -0.258819, -4.2222e-08, -39.335, 6.345, 13.89)
+transform = Transform3D(-4.37114e-08, 9.1951e-16, 1, -0.5, 0.866026, -2.18557e-08, -0.866026, -0.5, -3.78552e-08, -39.335, 10.245, 11.71)
 flip_faces = true
 size = Vector3(34, 4, 4)
 
@@ -222,12 +222,12 @@ flip_faces = true
 size = Vector3(4, 4, 6)
 
 [node name="CSGBox3D39" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 0.96, 0, 0, 0, 1, -38.9743, 10.74, 42)
+transform = Transform3D(1, 0, 0, 0, 0.96, 0, 0, 0, 1, -38.974, 18.495, 38)
 flip_faces = true
 size = Vector3(4, 4, 4)
 
 [node name="CSGBox3D40" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 0.96, 0, 0, 0, 1, -39, 10.74, 46)
+transform = Transform3D(1, 0, 0, 0, 0.96, 0, 0, 0, 1, -39, 18.48, 42)
 flip_faces = true
 size = Vector3(4, 4, 4)
 
@@ -551,13 +551,13 @@ transform = Transform3D(-2.18557e-08, 3.695, 0, -0.5, -1.61514e-07, 0, 0, 0, 0.5
 timerLength = 3.0
 
 [node name="door9" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_6qmls")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 8.815, 43)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 16.57, 39)
 listenFor = NodePath("../MultiButton9")
 
 [node name="MultiButton9" parent="." instance=ExtResource("2_xttof")]
 
 [node name="Button" parent="MultiButton9" instance=ExtResource("3_5c1lj")]
-transform = Transform3D(0.445, 0, 0, 0, -1.94516e-08, -0.445, 0, 0.445, -1.94516e-08, -36.22, 10.975, 41.945)
+transform = Transform3D(0.445, 0, 0, 0, -1.94516e-08, -0.445, 0, 0.445, -1.94516e-08, -36.455, 18.39, 37.65)
 
 [node name="door10" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_6qmls")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.33, 0, -4)
@@ -576,7 +576,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 18.8, 49)
 
 [node name="Elevator" parent="." instance=ExtResource("8_ek4nu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 8.8, 49)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39, 16.71, 45)
 levelId = 6
 
 [node name="Guard 1" parent="." node_paths=PackedStringArray("target", "patrolPath") instance=ExtResource("9_g1fgj")]

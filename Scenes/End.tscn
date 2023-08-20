@@ -55,7 +55,7 @@ offset_top = -119.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = SubResource("Theme_drsbp")
-text = "\"Oh no, he's loose! The asset is loose!\""
+text = "\"Oh no, it's loose! The asset is loose!\""
 horizontal_alignment = 1
 
 [node name="BlackRect" type="ColorRect" parent="."]
@@ -114,10 +114,10 @@ text = "Thank you for playing :^)
 Credits
 
 Hugh Bagan - Producer
-Aiden Collins-Cruickshank - Musician
+Aiden Collins-Cruickshank - Audio
 Colton Luo - Programmer, Tester
 Evan - Programmer
-Rei - Game Designer
+Rei \"TheOptimisticPessimist\" Salucop - Game Designer
 Achyuth Rajagopalan - Level Designer, 3D Artist
 Haley Skjersven - Writer
 Elliot Snyder - Artist

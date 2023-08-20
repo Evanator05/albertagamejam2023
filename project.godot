@@ -10,9 +10,11 @@ config_version=5
 
 [application]
 
-config/name="AlbertaGameJam2023"
+config/name="Spy on the Fly"
+config/description="Escape! After a less than gorgeous infiltration attempt, you have been locked in the enemy’s in site jail! It’s your time to shine; dash through corridors, avoid the prying eyes of guards, and leave them behind via elevators! Fulfill your spy filled dreams today!"
 run/main_scene="res://Scenes/Title.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
+boot_splash/show_image=false
 config/icon="res://icon.svg"
 
 [autoload]

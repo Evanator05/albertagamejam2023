@@ -117,7 +117,7 @@ text = "Kick Butt"
 
 [node name="TitleMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_ys5yg")
-volume_db = 5.0
+volume_db = -15.0
 autoplay = true
 
 [node name="BlackRect" type="ColorRect" parent="."]
