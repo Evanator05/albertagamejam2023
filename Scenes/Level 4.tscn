@@ -90,9 +90,9 @@ flip_faces = true
 size = Vector3(4, 4, 4)
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -30)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, -30)
 flip_faces = true
-size = Vector3(4, 4, 2)
+size = Vector3(4, 4, 4)
 
 [node name="CSGBox3D20" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12, 0, -31)
@@ -120,9 +120,9 @@ flip_faces = true
 size = Vector3(8, 4, 6)
 
 [node name="CSGBox3D18" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -30)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -29)
 flip_faces = true
-size = Vector3(8, 4, 6)
+size = Vector3(7.405, 4, 8)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
 transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, -8, 0, 10)
@@ -167,6 +167,7 @@ listenFor = NodePath("../MultiButton3")
 
 [node name="Button" parent="MultiButton3" instance=ExtResource("3_b5cxu")]
 transform = Transform3D(2.07619e-08, 1.315, -2.41593e-08, 0.275, -9.92797e-08, 0, 3.13496e-15, 1.98559e-07, 0.16, -8.095, 0.145, -13.5)
+timerLength = 3.0
 
 [node name="door4" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_0ef3s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -2, -31)
@@ -178,3 +179,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -2, -31)
 [node name="Button" parent="MultiButton4" instance=ExtResource("3_b5cxu")]
 transform = Transform3D(1.77, 0, 0, 0, 0.61, 0, 0, 0, 1.38, -1, 0.625, 13.92)
 timerLength = 30.0
+
+[node name="door5" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_0ef3s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5, -2, -15)
+listenFor = NodePath("../MultiButton5")
+
+[node name="MultiButton5" parent="." instance=ExtResource("2_5unpc")]
+
+[node name="Button" parent="MultiButton5" instance=ExtResource("3_b5cxu")]
+transform = Transform3D(-0.0186144, -1.37425, 0, 0.564693, -0.0453006, 0, 0, 0, 0.485, 5.033, -0.24, -11.987)
+timerLength = 3.0
+
+[node name="door6" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_0ef3s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, -2, -30)
+listenFor = NodePath("../MultiButton6")
+
+[node name="MultiButton6" parent="." instance=ExtResource("2_5unpc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, -2, -30)
+
+[node name="Button" parent="MultiButton6" instance=ExtResource("3_b5cxu")]
+transform = Transform3D(-8.53855e-16, -6.46929e-08, -0.525, -0.52, -6.46929e-08, 1.86517e-15, -2.27299e-08, 1.48, -2.29485e-08, -3, 2.015, 0.105)
+timerLength = 3.0

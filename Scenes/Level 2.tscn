@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bv7d6ii0jmlvt"]
+[gd_scene load_steps=8 format=3 uid="uid://b4wt6ch0fhyvh"]
 
 [ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="1_aeu2q"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_alxov"]
-[ext_resource type="PackedScene" path="res://Objects/Door.tscn" id="2_c024h"]
+[ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="2_c024h"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_8dvch"]
 [ext_resource type="PackedScene" path="res://Objects/Camera.tscn" id="5_r1457"]
 [ext_resource type="PackedScene" uid="uid://b2av77eexy866" path="res://Objects/Enemy.tscn" id="6_gh4we"]
