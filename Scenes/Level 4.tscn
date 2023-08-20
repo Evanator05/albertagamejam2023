@@ -20,35 +20,161 @@ navigation_mesh = SubResource("NavigationMesh_jp448")
 use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 flip_faces = true
 size = Vector3(30, 4, 6)
 
+[node name="CSGBox3D5" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -4)
+flip_faces = true
+size = Vector3(12, 4, 4)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 0, -9)
+flip_faces = true
+size = Vector3(12, 4, 4)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -17)
+flip_faces = true
+size = Vector3(12, 4, 4)
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -36)
+flip_faces = true
+size = Vector3(12, 4, 4)
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -28)
+flip_faces = true
+size = Vector3(12, 4, 4)
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0, -32)
+flip_faces = true
+size = Vector3(12, 4, 4)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -1)
+flip_faces = true
+size = Vector3(4, 4, 4)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5, 0, -15)
+flip_faces = true
+size = Vector3(4, 4, 2)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -9)
+flip_faces = true
+size = Vector3(4, 4, 20)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -11)
+flip_faces = true
+size = Vector3(4, 4, 16)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -22)
+flip_faces = true
+size = Vector3(4, 4, 32)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11, 0, -5)
+flip_faces = true
+size = Vector3(4, 4, 8)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 0, -11)
+flip_faces = true
+size = Vector3(4, 4, 4)
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -30)
+flip_faces = true
+size = Vector3(4, 4, 2)
+
+[node name="CSGBox3D20" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12, 0, -31)
+flip_faces = true
+size = Vector3(4, 4, 4)
+
+[node name="CSGBox3D22" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12, 0, -38)
+flip_faces = true
+size = Vector3(4, 4, 2)
+
 [node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 15)
 flip_faces = true
 size = Vector3(10, 4, 8)
 
+[node name="CSGBox3D9" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2068, 0, -11)
+flip_faces = true
+size = Vector3(8, 4, 6)
+
+[node name="CSGBox3D21" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -35)
+flip_faces = true
+size = Vector3(8, 4, 6)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -30)
+flip_faces = true
+size = Vector3(8, 4, 6)
+
 [node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, -8, 0, 7)
+transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, -8, 0, 10)
 flip_faces = true
 size = Vector3(6, 4, 4)
 
 [node name="door" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_0ef3s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -2, 8)
 listenFor = NodePath("../MultiButton")
 
 [node name="MultiButton" parent="." instance=ExtResource("2_5unpc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 1)
 
 [node name="Button" parent="MultiButton" instance=ExtResource("3_b5cxu")]
-transform = Transform3D(0.745, 0, 0, 0, -1.19551e-07, -1, 0, 2.735, -4.37114e-08, 0.918586, -0.5, 4.85302)
+transform = Transform3D(0.745, 0, 0, 0, -1.19551e-07, -1, 0, 2.735, -4.37114e-08, 0.918586, -0.5, 7.85302)
 timerLength = 3.0
 
 [node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("4_3o4sd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 4)
 camera = NodePath("../Camera3D")
 
 [node name="Camera3D" parent="." node_paths=PackedStringArray("track") instance=ExtResource("5_86vxp")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 11.9555, 0, 0.870932)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 11.9555, 0, 3.87093)
 track = NodePath("../Player")
+
+[node name="door2" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_0ef3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -2, 0)
+listenFor = NodePath("../MultiButton2")
+
+[node name="MultiButton2" parent="." instance=ExtResource("2_5unpc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0937, 0.709623, 0.5)
+
+[node name="Button" parent="MultiButton2" instance=ExtResource("3_b5cxu")]
+transform = Transform3D(1, 0, 0, 0, -9.09197e-08, -1, 0, 2.08, -4.37114e-08, 3.936, -0.445, -1.032)
+timerLength = 3.0
+
+[node name="door3" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_0ef3s")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8, -2, -11)
+listenFor = NodePath("../MultiButton3")
+
+[node name="MultiButton3" parent="." instance=ExtResource("2_5unpc")]
+
+[node name="Button" parent="MultiButton3" instance=ExtResource("3_b5cxu")]
+transform = Transform3D(2.07619e-08, 1.315, -2.41593e-08, 0.275, -9.92797e-08, 0, 3.13496e-15, 1.98559e-07, 0.16, -8.095, 0.145, -13.5)
+
+[node name="door4" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_0ef3s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -2, -31)
+listenFor = NodePath("../MultiButton4")
+
+[node name="MultiButton4" parent="." instance=ExtResource("2_5unpc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -2, -31)
+
+[node name="Button" parent="MultiButton4" instance=ExtResource("3_b5cxu")]
+transform = Transform3D(1.77, 0, 0, 0, 0.61, 0, 0, 0, 1.38, -1, 0.625, 13.92)
+timerLength = 30.0
