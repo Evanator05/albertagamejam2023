@@ -5,7 +5,7 @@ var currentTrackId:int = 0
 
 func _ready():
 	changeSong("res://Audio/Music/Holding_Cell_Area_-_Calm.mp3", "res://Audio/Music/Holding_Cell_Area_-_Danger.mp3")
-	changeTrack(1)
+	changeTrack(0)
 
 func changeTrack(trackId):
 	var t1 = get_tree().create_tween()

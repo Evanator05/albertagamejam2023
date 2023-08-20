@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvxi3tlovt3j2"]
+[gd_scene load_steps=9 format=3 uid="uid://dvxi3tlovt3j2"]
 
 [ext_resource type="Script" path="res://Scripts/Level.gd" id="1_5ultj"]
 [ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="1_wn65x"]
@@ -6,6 +6,7 @@
 [ext_resource type="Material" uid="uid://dh40gfqmsavuk" path="res://Materials/map.material" id="2_4s106"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_sdh0m"]
 [ext_resource type="PackedScene" uid="uid://bn5pu4gcmr0oj" path="res://Objects/Elevator.tscn" id="5_vmqtg"]
+[ext_resource type="PackedScene" uid="uid://cnq0cu8t4e7ww" path="res://Objects/Box.tscn" id="7_664rd"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_0gbfy"]
 vertices = PackedVector3Array(-3.238, 0.5, -7.25, -3.488, 0.5, -9.25, -6.238, 0.5, -9.25, -6.238, 0.5, -4.5, 2.012, 0.5, -4.5, 2.262, 0.5, -7.25, -3.238, 0.5, -7.25, -6.238, 0.5, -4.5, 2.012, 0.5, 1.75, 2.012, 0.5, 4.5, 3.512, 0.5, 4.5, 3.762, 0.5, 1.5, 6.512, 0.5, -1, 6.512, 0.5, -7.25, 3.762, 0.5, -4.25, 3.762, 0.5, 1.5, 3.512, 0.5, 4.5, 3.762, 0.5, 5.5, 6.512, 0.5, 5.5, 6.512, 0.5, -1, 3.762, 0.5, 1.5, 2.262, 0.5, -7.25, 2.012, 0.5, -4.5, 3.762, 0.5, -4.25, 6.512, 0.5, -7.25, 2.012, 0.5, 4.5, 2.012, 0.5, 1.75, 0.512, 0.5, 1.5, 0.512, 0.5, 4.75, 0.512, 0.5, 1.5, -6.238, 0.5, -1.25, -6.238, 0.5, 7.25, 0.512, 0.5, 4.75, -6.238, 0.5, 7.25, 0.512, 0.5, 7.25, 0.512, 0.5, 4.75, 0.512, 0.5, 1.5, 0.512, 0.5, -1.25, -6.238, 0.5, -1.25)
@@ -96,3 +97,18 @@ levelId = 1
 
 [node name="endPos" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 10, -11)
+
+[node name="Box" parent="." instance=ExtResource("7_664rd")]
+transform = Transform3D(0.627107, 0, -0.778933, 0, 1, 0, 0.778933, 0, 0.627107, -2.988, 1.02961, -0.523407)
+
+[node name="Box4" parent="." instance=ExtResource("7_664rd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.012, 1.02961, 0.476593)
+
+[node name="Box5" parent="." instance=ExtResource("7_664rd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.012, 1.02961, -3.52341)
+
+[node name="Box2" parent="." instance=ExtResource("7_664rd")]
+transform = Transform3D(-0.107357, 0, -0.99422, 0, 1, 0, 0.99422, 0, -0.107357, -5.388, 1.02961, 0.476593)
+
+[node name="Box3" parent="." instance=ExtResource("7_664rd")]
+transform = Transform3D(-0.107357, 0, -0.99422, 0, 1, 0, 0.99422, 0, -0.107357, -4.388, 3.02961, -0.523407)
