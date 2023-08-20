@@ -173,7 +173,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, -18.0122)
 
 [node name="Elevator" parent="." instance=ExtResource("8_e2j43")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, -2, -39)
-levelId = 1
+levelId = 2
 
 [node name="startPoint" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 4)

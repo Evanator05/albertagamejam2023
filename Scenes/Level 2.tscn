@@ -1,13 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4wt6ch0fhyvh"]
+[gd_scene load_steps=9 format=3 uid="uid://b4wt6ch0fhyvh"]
 
-[ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="1_aeu2q"]
+[ext_resource type="Script" path="res://Scripts/Level.gd" id="1_6ja3p"]
 [ext_resource type="Material" uid="uid://dh40gfqmsavuk" path="res://Materials/map.material" id="1_n0tc3"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_alxov"]
 [ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="2_c024h"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_8dvch"]
-[ext_resource type="PackedScene" uid="uid://ccoersjsjhk7s" path="res://Objects/Camera.tscn" id="5_r1457"]
 [ext_resource type="PackedScene" uid="uid://b2av77eexy866" path="res://Objects/Enemy.tscn" id="6_gh4we"]
-[ext_resource type="PackedScene" uid="uid://c20qyuf4oita8" path="res://Objects/Exit.tscn" id="7_fa46u"]
 [ext_resource type="PackedScene" uid="uid://bn5pu4gcmr0oj" path="res://Objects/Elevator.tscn" id="8_gy0r1"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_ejvsc"]
@@ -15,7 +13,10 @@ vertices = PackedVector3Array(-14.75, 0.5, -21.9683, -13, 0.5, -21.7183, -13, 0.
 polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(7, 6, 3), PackedInt32Array(3, 6, 5), PackedInt32Array(3, 5, 4), PackedInt32Array(10, 9, 11), PackedInt32Array(11, 9, 8), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(19, 18, 16), PackedInt32Array(16, 18, 17), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 23), PackedInt32Array(25, 24, 26), PackedInt32Array(26, 24, 27), PackedInt32Array(30, 29, 28), PackedInt32Array(33, 32, 31), PackedInt32Array(37, 36, 34), PackedInt32Array(34, 36, 35), PackedInt32Array(39, 38, 40), PackedInt32Array(40, 38, 41), PackedInt32Array(43, 42, 44), PackedInt32Array(44, 42, 45), PackedInt32Array(45, 42, 46), PackedInt32Array(48, 47, 49), PackedInt32Array(49, 47, 50), PackedInt32Array(54, 53, 51), PackedInt32Array(51, 53, 52), PackedInt32Array(57, 56, 55), PackedInt32Array(60, 59, 58), PackedInt32Array(62, 61, 63), PackedInt32Array(63, 61, 64), PackedInt32Array(67, 66, 68), PackedInt32Array(68, 66, 65), PackedInt32Array(71, 70, 69), PackedInt32Array(75, 74, 72), PackedInt32Array(72, 74, 73), PackedInt32Array(79, 78, 76), PackedInt32Array(76, 78, 77), PackedInt32Array(82, 81, 80), PackedInt32Array(84, 83, 85), PackedInt32Array(85, 83, 86), PackedInt32Array(88, 87, 89), PackedInt32Array(93, 92, 90), PackedInt32Array(90, 92, 91), PackedInt32Array(95, 94, 96), PackedInt32Array(96, 94, 97), PackedInt32Array(100, 99, 98), PackedInt32Array(103, 102, 101), PackedInt32Array(107, 106, 104), PackedInt32Array(104, 106, 105), PackedInt32Array(109, 108, 110), PackedInt32Array(110, 108, 111), PackedInt32Array(116, 115, 112), PackedInt32Array(112, 115, 114), PackedInt32Array(112, 114, 113), PackedInt32Array(119, 118, 120), PackedInt32Array(120, 118, 121), PackedInt32Array(121, 118, 117), PackedInt32Array(124, 123, 122), PackedInt32Array(127, 126, 125), PackedInt32Array(128, 131, 129), PackedInt32Array(129, 131, 130), PackedInt32Array(134, 133, 132), PackedInt32Array(135, 138, 136), PackedInt32Array(136, 138, 137), PackedInt32Array(142, 141, 139), PackedInt32Array(139, 141, 140), PackedInt32Array(146, 145, 143), PackedInt32Array(143, 145, 144), PackedInt32Array(149, 148, 147), PackedInt32Array(152, 151, 150), PackedInt32Array(156, 155, 153), PackedInt32Array(153, 155, 154), PackedInt32Array(159, 158, 157), PackedInt32Array(161, 160, 162), PackedInt32Array(162, 160, 163), PackedInt32Array(166, 165, 167), PackedInt32Array(167, 165, 164), PackedInt32Array(170, 169, 168), PackedInt32Array(173, 172, 171), PackedInt32Array(175, 174, 176), PackedInt32Array(176, 174, 177), PackedInt32Array(179, 178, 180), PackedInt32Array(180, 178, 181), PackedInt32Array(184, 183, 182), PackedInt32Array(185, 188, 186), PackedInt32Array(186, 188, 187), PackedInt32Array(192, 191, 189), PackedInt32Array(189, 191, 190), PackedInt32Array(194, 193, 195), PackedInt32Array(195, 193, 196), PackedInt32Array(197, 200, 198), PackedInt32Array(198, 200, 199), PackedInt32Array(203, 202, 201), PackedInt32Array(204, 207, 205), PackedInt32Array(205, 207, 206), PackedInt32Array(210, 209, 208), PackedInt32Array(213, 212, 211), PackedInt32Array(217, 216, 214), PackedInt32Array(214, 216, 215), PackedInt32Array(221, 220, 218), PackedInt32Array(218, 220, 219), PackedInt32Array(225, 224, 222), PackedInt32Array(222, 224, 223), PackedInt32Array(228, 227, 226), PackedInt32Array(230, 229, 231), PackedInt32Array(231, 229, 232), PackedInt32Array(232, 229, 234), PackedInt32Array(232, 234, 233), PackedInt32Array(237, 236, 235)]
 agent_radius = 1.0
 
-[node name="Level 2" type="Node3D"]
+[node name="Level 2" type="Node3D" node_paths=PackedStringArray("startPos", "endPos")]
+script = ExtResource("1_6ja3p")
+startPos = NodePath("startPos")
+endPos = NodePath("endPos")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_ejvsc")
@@ -28,6 +29,11 @@ use_collision = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 2, 3)
 flip_faces = true
 size = Vector3(36, 4, 4)
+
+[node name="CSGBox3D27" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -5, -26)
+flip_faces = true
+size = Vector3(2, 10, 2)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8, 2, -3)
@@ -150,9 +156,13 @@ flip_faces = true
 size = Vector3(10, 4, 4)
 
 [node name="CSGBox3D26" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 9.15, -31.95)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 4, -31.95)
 flip_faces = true
-size = Vector3(2, 20, 2)
+size = Vector3(2, 12, 2)
+
+[node name="CSGBox3D28" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 16, -31.95)
+size = Vector3(10, 12, 14)
 
 [node name="door" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("2_c024h")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -18, 0, 3)
@@ -172,14 +182,6 @@ timerLength = 3.0
 [node name="Button2" parent="MultiButton" instance=ExtResource("3_8dvch")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.6958, 0, 1.95291)
 timerLength = 3.0
-
-[node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_aeu2q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1, -25.1524)
-camera = NodePath("../Camera3D")
-
-[node name="Camera3D" parent="." node_paths=PackedStringArray("track") instance=ExtResource("5_r1457")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8, 1, -26)
-track = NodePath("../Player")
 
 [node name="MultiButton2" parent="." instance=ExtResource("2_alxov")]
 
@@ -334,8 +336,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, -3)
 [node name="Node3D4" type="Node3D" parent="Guard 3 patrol"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, -3)
 
-[node name="Exit" parent="." instance=ExtResource("7_fa46u")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, -3, -2.38419e-07, -30)
-
 [node name="Elevator" parent="." instance=ExtResource("8_gy0r1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -32)
+levelId = 3
+
+[node name="startPos" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -26)
+
+[node name="endPos" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 10, -32)

@@ -9,6 +9,7 @@ var sections = [
 ]
 
 var currentMap
+var respawnPoint:Vector3
 var firstMap = true
 
 func _ready():
@@ -23,7 +24,7 @@ func loadSection(index:int):
 	if not firstMap:
 		diff = currentMap.endPos.global_transform.origin - mapInst.startPos.global_transform.origin
 	mapInst.global_transform.origin = diff
-	
+	respawnPoint = mapInst.startPos.global_transform.origin + Vector3(0, 1, 0)
 	currentMap = mapInst
 	firstMap = false
 

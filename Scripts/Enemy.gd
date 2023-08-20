@@ -77,8 +77,9 @@ func _on_spot_area_body_entered(body):
 				chaseTarget = body
 
 func _on_die_area_body_entered(body):
-	if (body.get_name() == "Player" and state == ALERT):
-		get_tree().reload_current_scene()
+	if (body is Player and state == ALERT):
+		state = PATROL
+		body.die()
 
 func hit():
 	emit_signal("body_part_hit", damage)

@@ -11,13 +11,12 @@ config_version=5
 [application]
 
 config/name="AlbertaGameJam2023"
-run/main_scene="res://Scenes/Level.tscn"
+run/main_scene="res://Scenes/Game.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Levels="*res://Scripts/Levels.gd"
 Inventory="*res://Inventory/Inventory.gd"
 Globals="*res://Scripts/Globals.gd"
 

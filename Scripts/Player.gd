@@ -39,7 +39,7 @@ func dead():
 	pass
 
 func die():
-	state = dead
+	global_transform.origin = Globals.mapSections.respawnPoint
 
 func getAngle(dir):
 	var pos = global_transform.origin
