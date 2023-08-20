@@ -110,23 +110,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, -29)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -31)
 
 [node name="Enemy" parent="." node_paths=PackedStringArray("target", "patrolPath") instance=ExtResource("6_lsk83")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.20381, -1.99988, -15.1802)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2038, -1.99988, 3.8198)
 target = NodePath("../Guard path")
 patrolPath = [NodePath("../Guard path/Node3D"), NodePath("../Guard path/Node3D2"), NodePath("../Guard path/Node3D3"), NodePath("../Guard path/Node3D5")]
 
 [node name="Guard path" type="Node3D" parent="."]
 
 [node name="Node3D" type="Node3D" parent="Guard path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, -2, -16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, -2, 4)
 
 [node name="Node3D2" type="Node3D" parent="Guard path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, -16)
-
-[node name="Node3D3" type="Node3D" parent="Guard path"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, 4)
 
+[node name="Node3D3" type="Node3D" parent="Guard path"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2, -15)
+
 [node name="Node3D5" type="Node3D" parent="Guard path"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, -2, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, -2, -16)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.01223)
