@@ -95,6 +95,7 @@ func _on_body_part_hit(dam):
 		get_tree().create_timer(5.0).timeout.connect(func(): 
 			speed = 6
 			$die/CollisionShape3D.disabled = false
+			state = PATROL
 			)
 		move_and_slide()
 		
