@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://20vphdu1xj88"]
+[gd_scene load_steps=7 format=3 uid="uid://7i1hit1n3lee"]
 
 [ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="1_2baco"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_d742s"]
@@ -153,7 +153,7 @@ flip_faces = true
 size = Vector3(4, 4, 10)
 
 [node name="CSGBox3D32" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 48.9979, 0, 18)
+transform = Transform3D(1.31106e-07, 0.020576, 0.999788, -2.69821e-09, 0.999788, -0.020576, -1, 0, 1.31134e-07, 48.9979, 0, 18)
 flip_faces = true
 size = Vector3(4, 4, 18)
 
@@ -319,7 +319,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, -2, 22)
 listenFor = NodePath("../MultiButton9")
 
 [node name="door5" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_2baco")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 45, -2, 9)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 44.9321, -2.15397, 9.36455)
 listenFor = NodePath("../MultiButton6")
 
 [node name="door6" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_2baco")]
@@ -353,21 +353,23 @@ timerLength = 3.0
 [node name="MultiButton7" parent="." instance=ExtResource("2_d742s")]
 
 [node name="Button" parent="MultiButton7" instance=ExtResource("3_nppyv")]
-transform = Transform3D(-6.55671e-09, -1.195, 0, 0.15, -5.22351e-08, 0, 0, 0, 0.15, 45, -1, -6)
+transform = Transform3D(-6.55671e-09, -1.37, 0, 0.15, -5.98846e-08, 0, 0, 0, 0.15, 45, -1, -6.035)
 timerLength = 3.0
 
 [node name="MultiButton6" parent="." instance=ExtResource("2_d742s")]
 
 [node name="Button" parent="MultiButton6" instance=ExtResource("3_nppyv")]
-transform = Transform3D(-1.00536e-08, -1.175, 0, 0.23, -5.13609e-08, 0, 0, 0, 0.23, 45, -1, 6)
+transform = Transform3D(-1.00536e-08, -1.325, 0, 0.23, -5.79176e-08, 0, 0, 0, 0.23, 45, -1, 6)
 timerLength = 3.0
 
 [node name="MultiButton8" parent="." instance=ExtResource("2_d742s")]
 
 [node name="Button" parent="MultiButton8" instance=ExtResource("3_nppyv")]
 transform = Transform3D(0.445, 0, 0, 0, -1.94516e-08, -0.445, 0, 0.445, -1.94516e-08, 53, -1, 16)
+timerLength = 3.0
 
 [node name="MultiButton9" parent="." instance=ExtResource("2_d742s")]
 
 [node name="Button" parent="MultiButton9" instance=ExtResource("3_nppyv")]
 transform = Transform3D(0.36, 0, 0, 0, -1.57361e-08, 0.36, 0, -0.36, -1.57361e-08, 31, 0, 21)
+timerLength = 3.0

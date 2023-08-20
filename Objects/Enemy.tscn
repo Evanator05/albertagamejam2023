@@ -12,16 +12,16 @@ points = PackedVector3Array(-1, 0, 1, -5, 0, -8, 5, 0, -8, -5, 4, -8, 5, 4, -8, 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_55jwj"]
 radius = 1.0
 
-[node name="Enemy" type="CharacterBody3D"]
+[node name="Enemy" type="CharacterBody3D" groups=["enemy"]]
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 script = ExtResource("1_y3exf")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["enemy"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 mesh = SubResource("CapsuleMesh_wg24k")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["enemy"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_70sdp")
 
@@ -50,5 +50,6 @@ shape = SubResource("ConvexPolygonShape3D_6b0bs")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_55jwj")
 
+[connection signal="body_part_hit" from="." to="." method="_on_body_part_hit"]
 [connection signal="body_entered" from="SpotArea" to="." method="_on_spot_area_body_entered"]
 [connection signal="body_entered" from="die" to="." method="_on_die_area_body_entered"]
