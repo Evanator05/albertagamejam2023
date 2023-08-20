@@ -100,58 +100,58 @@ flip_faces = true
 size = Vector3(4, 4, 4)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.85164, 0)
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.85164, 0)
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -13)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.85164, -13)
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 11)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 2.85164, 11)
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, 13)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 2.85164, 13)
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 0, 25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41, 2.85164, 25)
 
 [node name="OmniLight3D7" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57, 0, 23)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57, 2.85164, 23)
 
 [node name="OmniLight3D11" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 0, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 2.85164, 3)
 
 [node name="OmniLight3D12" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76, 2.85164, 5)
 
 [node name="OmniLight3D8" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47, 0, 13)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47, 2.85164, 13)
 
 [node name="OmniLight3D10" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67, 0, 14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67, 2.85164, 14)
 
 [node name="OmniLight3D13" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65, 0, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65, 2.85164, -6)
 
 [node name="OmniLight3D14" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -27)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2.85164, -27)
 
 [node name="OmniLight3D18" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -54)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 2.85164, -54)
 
 [node name="OmniLight3D19" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -45)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2.85164, -45)
 
 [node name="OmniLight3D15" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 0, -35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 2.85164, -35)
 
 [node name="OmniLight3D16" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, -35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 2.85164, -35)
 
 [node name="OmniLight3D17" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 0, -35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36, 2.85164, -35)
 
 [node name="door" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_6qmls")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
