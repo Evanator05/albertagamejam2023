@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="4_o6sbw"]
 [ext_resource type="PackedScene" path="res://Objects/Camera.tscn" id="5_c3g07"]
 [ext_resource type="PackedScene" uid="uid://b2av77eexy866" path="res://Objects/Enemy.tscn" id="6_lsk83"]
-[ext_resource type="PackedScene" uid="uid://c20qyuf4oita8" path="res://Objects/Exit.tscn" id="7_p0abd"]
+[ext_resource type="PackedScene" path="res://Objects/Exit.tscn" id="7_p0abd"]
 [ext_resource type="PackedScene" uid="uid://bn5pu4gcmr0oj" path="res://Objects/Elevator.tscn" id="8_e2j43"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_hwf4j"]
