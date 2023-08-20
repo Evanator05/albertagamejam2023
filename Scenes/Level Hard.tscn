@@ -265,7 +265,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 2.85164, 11)
 script = ExtResource("3_oa6w3")
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 2.85164, 13)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0095, 2.85164, 13)
 script = ExtResource("3_oa6w3")
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="NavigationRegion3D"]
