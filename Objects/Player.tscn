@@ -50,9 +50,10 @@ shape = SubResource("CylinderShape3D_55hsi")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 visible = false
 billboard = 1
-modulate = Color(1, 0, 0, 1)
+modulate = Color(0.227451, 0.639216, 0.403922, 1)
 text = "[E]"
 font_size = 128
+outline_size = 22
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1.5, 0, -2.26494e-07, 0, 1.5, 0, 2.26494e-07, 0, -1.5, 0, 0, 0)
