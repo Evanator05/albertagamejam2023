@@ -22,10 +22,9 @@ func alive():
 	interact()
 	shoot()
 	var inputs:Vector2 = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
-	if inputs != Vector2.ZERO:
-		var pos = getMousePos()
-		if not pos == null:
-			rotation.y = getAngle(pos)
+	var pos = getMousePos()
+	if not pos == null:
+		rotation.y = getAngle(pos)
 	velocity = Vector3(inputs.x, 0, inputs.y)*maxSpeed
 	camera.offset.y = (getRoomSize()/2)+5
 	move_and_slide()
