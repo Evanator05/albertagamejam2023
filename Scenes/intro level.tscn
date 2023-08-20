@@ -1,16 +1,26 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvxi3tlovt3j2"]
+[gd_scene load_steps=8 format=3 uid="uid://dvxi3tlovt3j2"]
 
+[ext_resource type="Script" path="res://Scripts/Level.gd" id="1_5ultj"]
 [ext_resource type="PackedScene" uid="uid://c1rkum0jnbvdo" path="res://Objects/Door.tscn" id="1_wn65x"]
 [ext_resource type="PackedScene" uid="uid://dj7iccj4gx0yh" path="res://Objects/Buttons/MultiButton.tscn" id="2_3byu8"]
+[ext_resource type="Material" uid="uid://dh40gfqmsavuk" path="res://Materials/map.material" id="2_4s106"]
 [ext_resource type="PackedScene" uid="uid://b5jhlu5cuucef" path="res://Objects/Button.tscn" id="3_sdh0m"]
-[ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="4_qupx1"]
-[ext_resource type="PackedScene" path="res://Objects/Camera.tscn" id="5_ols7f"]
+[ext_resource type="PackedScene" uid="uid://bn5pu4gcmr0oj" path="res://Objects/Elevator.tscn" id="5_vmqtg"]
 
-[node name="intro level" type="Node3D"]
+[sub_resource type="NavigationMesh" id="NavigationMesh_0gbfy"]
+vertices = PackedVector3Array(-3.238, 0.5, -7.25, -3.488, 0.5, -9.25, -6.238, 0.5, -9.25, -6.238, 0.5, -4.5, 2.012, 0.5, -4.5, 2.262, 0.5, -7.25, -3.238, 0.5, -7.25, -6.238, 0.5, -4.5, 2.012, 0.5, 1.75, 2.012, 0.5, 4.5, 3.512, 0.5, 4.5, 3.762, 0.5, 1.5, 6.512, 0.5, -1, 6.512, 0.5, -7.25, 3.762, 0.5, -4.25, 3.762, 0.5, 1.5, 3.512, 0.5, 4.5, 3.762, 0.5, 5.5, 6.512, 0.5, 5.5, 6.512, 0.5, -1, 3.762, 0.5, 1.5, 2.262, 0.5, -7.25, 2.012, 0.5, -4.5, 3.762, 0.5, -4.25, 6.512, 0.5, -7.25, 2.012, 0.5, 4.5, 2.012, 0.5, 1.75, 0.512, 0.5, 1.5, 0.512, 0.5, 4.75, 0.512, 0.5, 1.5, -6.238, 0.5, -1.25, -6.238, 0.5, 7.25, 0.512, 0.5, 4.75, -6.238, 0.5, 7.25, 0.512, 0.5, 7.25, 0.512, 0.5, 4.75, 0.512, 0.5, 1.5, 0.512, 0.5, -1.25, -6.238, 0.5, -1.25)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 7), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(17, 16, 18), PackedInt32Array(18, 16, 20), PackedInt32Array(18, 20, 19), PackedInt32Array(22, 21, 23), PackedInt32Array(23, 21, 24), PackedInt32Array(25, 28, 26), PackedInt32Array(26, 28, 27), PackedInt32Array(32, 31, 29), PackedInt32Array(29, 31, 30), PackedInt32Array(35, 34, 33), PackedInt32Array(38, 37, 36)]
+
+[node name="intro level" type="Node3D" node_paths=PackedStringArray("startPos", "endPos")]
+script = ExtResource("1_5ultj")
+startPos = NodePath("startPos")
+endPos = NodePath("endPos")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_0gbfy")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D"]
+material_override = ExtResource("2_4s106")
 use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
@@ -38,6 +48,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.988, 2, -9)
 flip_faces = true
 size = Vector3(4, 4, 2)
 
+[node name="CSGBox3D6" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 4, -11)
+flip_faces = true
+size = Vector3(2, 12, 2)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.988, 15, -10.5)
+size = Vector3(18, 10, 16)
+
 [node name="door" parent="." node_paths=PackedStringArray("listenFor") instance=ExtResource("1_wn65x")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, 3)
 listenFor = NodePath("../MultiButton")
@@ -49,23 +68,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
 timerLength = 5.0
 
-[node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("4_qupx1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 3)
-camera = NodePath("../Camera3D")
-
-[node name="Camera3D" parent="." node_paths=PackedStringArray("track") instance=ExtResource("5_ols7f")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4, 2, 3)
-current = false
-track = NodePath("../Player")
-
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.00553, 0, 3.15706)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.00553, 4, 3.15706)
+shadow_enabled = true
+omni_range = 13.0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99447, 0, 3.15706)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99447, 4, 3.15706)
+shadow_enabled = true
+omni_range = 10.0
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99447, 0, -5.84294)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99447, 4, -5.84294)
+shadow_enabled = true
+omni_range = 9.0
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.00553, 0, -5.84294)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.00553, 4, -5.84294)
+shadow_enabled = true
+omni_range = 7.0
+
+[node name="Elevator" parent="." instance=ExtResource("5_vmqtg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -11)
+levelId = 1
+
+[node name="startPos" type="Node3D" parent="."]
+
+[node name="endPos" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 10, -11)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c64dh7tmfq26l"]
+
+[ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="1_7vwb5"]
+[ext_resource type="Script" path="res://Scripts/MapSections.gd" id="1_u3s5k"]
+[ext_resource type="PackedScene" uid="uid://ccoersjsjhk7s" path="res://Objects/Camera.tscn" id="2_epy8b"]
+
+[node name="Game" type="Node3D"]
+
+[node name="MapSections" type="Node3D" parent="."]
+script = ExtResource("1_u3s5k")
+
+[node name="Player" parent="." node_paths=PackedStringArray("camera") instance=ExtResource("1_7vwb5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+camera = NodePath("../Camera3D")
+
+[node name="Camera3D" parent="." node_paths=PackedStringArray("track") instance=ExtResource("2_epy8b")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+track = NodePath("../Player")

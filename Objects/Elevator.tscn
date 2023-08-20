@@ -1,8 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://bn5pu4gcmr0oj"]
+[gd_scene load_steps=7 format=3 uid="uid://bn5pu4gcmr0oj"]
 
 [ext_resource type="Script" path="res://Objects/Elevator.gd" id="1_8xwgw"]
+[ext_resource type="Texture2D" uid="uid://c0x103i73yd21" path="res://Textures/Exit Texture ( detailed ).png" id="2_grhr3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cn030"]
+albedo_texture = ExtResource("2_grhr3")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_iu27p"]
+material = SubResource("StandardMaterial3D_cn030")
 size = Vector3(2, 1, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fvgvu"]
