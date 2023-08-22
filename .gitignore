@@ -1,3 +1,5 @@
+# The following has been yoinked from https://github.com/github/gitignore/blob/main/Godot.gitignore
+# -----------------
 # Godot 4+ specific ignores
 .godot/
 
@@ -13,6 +15,7 @@
 .mono/
 data_*/
 mono_crash.*.json
+# -----------------
 
 # Suggested by Hugh
 .DS_Store
