@@ -18,8 +18,6 @@ var currentLevel = 0
 func _ready():
 	Globals.mapSections = self
 	loadSection(0)
-	
-	
 
 func loadSection(index:int):
 	currentLevel = index
