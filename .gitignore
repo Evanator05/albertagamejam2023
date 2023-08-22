@@ -1,1 +1,21 @@
+# The following has been yoinked from https://github.com/github/gitignore/blob/main/Godot.gitignore
+# -----------------
+# Godot 4+ specific ignores
+.godot/
+
+# Godot-specific ignores
+.import/
+# export.cfg
+# export_presets.cfg
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
+# -----------------
+
+# Suggested by Hugh
 .DS_Store
