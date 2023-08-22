@@ -3,6 +3,7 @@ extends LightColor
 var timer = null
 
 func _ready():
+	super._ready()
 	randomize()
 	timer = Timer.new()
 	timer.wait_time = randf_range(0.8, 0.1)

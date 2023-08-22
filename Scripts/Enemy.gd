@@ -76,11 +76,13 @@ func _on_spot_area_body_entered(body):
 			var col = intersection["collider"]
 			if col == body:
 				state = ALERT
+				Globals.activeGuards += 1
 				chaseTarget = body
 
 func _on_die_area_body_entered(body):
 	if (body is Player and state == ALERT):
 		body.die()
+		Globals.activeGuards = 0
 		Globals.emit_signal("refreshLevel")
 
 func hit():
@@ -91,6 +93,7 @@ func _on_body_part_hit(dam):
 	#var moveDir:Vector3 = nextPoint-global_transform.origin
 	if health <= 0:
 		speed = 0
+		Globals.activeGuards -= 1
 		$die/CollisionShape3D.disabled = true
 		get_tree().create_timer(5.0).timeout.connect(func(): 
 			speed = 6

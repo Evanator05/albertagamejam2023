@@ -95,6 +95,7 @@ grow_vertical = 2
 
 [node name="EndMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_owdkh")
+autoplay = true
 
 [node name="Credits" type="Label" parent="."]
 visible = false

@@ -103,6 +103,7 @@ func shoot():
 			ammo -= 1 
 			$UI.updateAmmo(ammo)
 			gun_anim.play("Shooting")
+			$gunSound.play()
 			instance = bullet.instantiate()
 			instance.position = gun_barrel.global_position
 			instance.transform.basis = gun_barrel.global_transform.basis
