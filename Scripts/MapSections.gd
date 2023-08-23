@@ -1,14 +1,13 @@
 extends Node3D
 
 var sections = [
-	"res://Scenes/Level 0 intro.tscn",
-	"res://Scenes/Level 1.tscn",
-	"res://Scenes/Level 2.tscn",
-	"res://Scenes/Level 3.tscn",
-	"res://Scenes/Level 4.tscn",
-	"res://Scenes/Level Hard.tscn",
-	"res://Scenes/Level outro.tscn"
-]
+	"res://Scenes/Levels/0.tscn",
+	"res://Scenes/Levels/1.tscn",
+	"res://Scenes/Levels/2.tscn",
+	"res://Scenes/Levels/3.tscn",
+	"res://Scenes/Levels/4.tscn",
+	"res://Scenes/Levels/5.tscn",
+	"res://Scenes/Levels/6.tscn"]
 
 var currentMap
 var respawnPoint:Vector3

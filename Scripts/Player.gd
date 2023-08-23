@@ -7,8 +7,7 @@ var ammo = 5
 
 @onready var gun_anim = $Gun/AnimationPlayer
 @onready var gun_barrel = $Gun/RayCast3D
-var bullet = load("res://Scenes/bullet.tscn")
-var instance
+var bullet = load("res://Objects/bullet.tscn")
 
 var state:Callable
 
@@ -36,8 +35,7 @@ func alive(delta):
 		footsteptimer = 0
 	
 	var pos = getMousePos()
-	if not pos == null:
-		rotation.y = getAngle(pos)
+	if not pos == null: rotation.y = getAngle(pos)
 	velocity = Vector3(inputs.x, 0, inputs.y)*maxSpeed
 	camera.offset.y = (getRoomSize()/2)+5
 	move_and_slide()
@@ -73,10 +71,10 @@ func canInteract():
 	return false
 
 func interact():
-	if Input.is_action_just_pressed("interact"):
-		for area in $interactionArea.get_overlapping_areas():
-			if area is InteractArea:
-				area.interact(self)
+	if not Input.is_action_just_pressed("interact"): return
+	for area in $interactionArea.get_overlapping_areas():
+		if area is InteractArea:
+			area.interact(self)
 
 func getMousePos():
 	var mouse_position = get_viewport().get_mouse_position()
@@ -88,28 +86,22 @@ func getMousePos():
 	var space_state = get_world_3d().direct_space_state
 	var intersection = space_state.intersect_ray(ray)
 	
-	if not intersection.is_empty():
-		var pos = intersection["position"]
-		var look_at_me = Vector3(pos.x, global_transform.origin.y, pos.z)
-		return look_at_me
-	else:
-		return null
-		
+	if intersection.is_empty(): return null
+	var pos = intersection["position"]
+	var look_at_me = Vector3(pos.x, global_transform.origin.y, pos.z)
+	return look_at_me
+
 func shoot():
-	if not ammo>0:
-		return
-	if Input.is_action_just_pressed("shoot"):
-		if !gun_anim.is_playing():
-			ammo -= 1 
-			$UI.updateAmmo(ammo)
-			gun_anim.play("Shooting")
-			$gunSound.play()
-			instance = bullet.instantiate()
-			instance.position = gun_barrel.global_position
-			instance.transform.basis = gun_barrel.global_transform.basis
-			get_parent().add_child(instance)
-			
-	
+	if not ammo>0: return
+	if not Input.is_action_just_pressed("shoot"): return
+	if gun_anim.is_playing(): return
+	ammo -= 1 
+	$UI.updateAmmo(ammo)
+	gun_anim.play("Shooting")
+	$gunSound.play()
+	var bulletInst = bullet.instantiate()
+	bulletInst.global_transform = gun_barrel.global_transform
+	get_parent().add_child(bulletInst)
 
 func getRoomSize():
 	$Raycasts.global_transform.origin = global_transform.origin

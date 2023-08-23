@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bpodwf3jw3xts"]
 
-[ext_resource type="PackedScene" uid="uid://cuufp7qbewjlb" path="res://Models/Steampunk Rifle.glb" id="1_q43v6"]
+[ext_resource type="PackedScene" uid="uid://cuufp7qbewjlb" path="res://Models/Steampunk Rifle.glb" id="1_u0pp5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aq8kt"]
 albedo_color = Color(0.470588, 0.596078, 1, 1)
@@ -38,7 +38,7 @@ _data = {
 "Shooting": SubResource("Animation_hm1o7")
 }
 
-[node name="Gun" instance=ExtResource("1_q43v6")]
+[node name="Gun" instance=ExtResource("1_u0pp5")]
 
 [node name="Node" parent="." index="0"]
 cast_shadow = 0

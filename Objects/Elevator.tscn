@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bn5pu4gcmr0oj"]
 
-[ext_resource type="Script" path="res://Objects/Elevator.gd" id="1_8xwgw"]
+[ext_resource type="Script" path="res://Scripts/Elevator.gd" id="1_8xwgw"]
 [ext_resource type="Texture2D" uid="uid://c0x103i73yd21" path="res://Textures/Exit Texture ( detailed ).png" id="2_grhr3"]
 [ext_resource type="AudioStream" uid="uid://d1v8jm3agaaug" path="res://Audio/Music/Elevator_Music.mp3" id="3_dykgm"]
 

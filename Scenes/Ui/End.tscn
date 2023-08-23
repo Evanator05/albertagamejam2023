@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://4bhkhqjr3j2x"]
 
-[ext_resource type="Texture2D" uid="uid://fdaiu8f207sy" path="res://Textures/endsplash.png" id="1_2c3v1"]
-[ext_resource type="Script" path="res://Scenes/End.gd" id="1_jbdtj"]
-[ext_resource type="AudioStream" uid="uid://by4syxgh11p83" path="res://Audio/Music/Credits.mp3" id="3_owdkh"]
+[ext_resource type="Script" path="res://Scripts/Ui/End.gd" id="1_t8say"]
+[ext_resource type="Texture2D" uid="uid://fdaiu8f207sy" path="res://Textures/endsplash.png" id="2_14hhg"]
+[ext_resource type="AudioStream" uid="uid://by4syxgh11p83" path="res://Audio/Music/Credits.mp3" id="3_ohlqu"]
 
 [sub_resource type="Theme" id="Theme_drsbp"]
 default_font_size = 30
@@ -23,7 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_jbdtj")
+script = ExtResource("1_t8say")
 
 [node name="BackgroundColor" type="ColorRect" parent="."]
 layout_mode = 1
@@ -40,7 +40,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_2c3v1")
+texture = ExtResource("2_14hhg")
 expand_mode = 3
 stretch_mode = 5
 
@@ -94,7 +94,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="EndMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_owdkh")
+stream = ExtResource("3_ohlqu")
 autoplay = true
 
 [node name="Credits" type="Label" parent="."]

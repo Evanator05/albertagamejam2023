@@ -6,6 +6,4 @@ func _on_body_entered(body):
 		var tween = get_tree().create_tween()
 		tween.tween_property($ColorRect, "color:a", 1, 3)
 		await tween.finished
-		#change to ending screen
-		get_tree().change_scene_to_file("res://Scenes/End.tscn")
-		
+		get_tree().change_scene_to_file("res://Scenes/Ui/End.tscn")
