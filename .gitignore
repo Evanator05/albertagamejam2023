@@ -19,3 +19,6 @@ mono_crash.*.json
 
 # Suggested by Hugh
 .DS_Store
+# -----------------
+
+.vscode/settings.json
