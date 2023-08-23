@@ -76,9 +76,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{eeb5a615-826f-49f5-8740-84d90eab976b}">
-		<property name="volume">
-			<value>6</value>
-		</property>
 		<relationship name="effectChain">
 			<destination>{0077579e-3656-4fc4-9cc5-682fb652bd0c}</destination>
 		</relationship>
@@ -133,7 +130,7 @@
 	</object>
 	<object class="LoopRegion" id="{e457f43a-9480-4ee2-b9c2-33f4ea97faf7}">
 		<property name="position">
-			<value>42.666666666666664</value>
+			<value>32</value>
 		</property>
 		<property name="length">
 			<value>21.333333333333329</value>

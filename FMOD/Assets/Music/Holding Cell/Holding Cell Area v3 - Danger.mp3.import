@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dx58ulcdcju68"
+path="res://.godot/imported/Holding Cell Area v3 - Danger.mp3-43c2dd1f1ea8466b78add51cc9845d4a.mp3str"
+
+[deps]
+
+source_file="res://FMOD/Assets/Music/Holding Cell/Holding Cell Area v3 - Danger.mp3"
+dest_files=["res://.godot/imported/Holding Cell Area v3 - Danger.mp3-43c2dd1f1ea8466b78add51cc9845d4a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

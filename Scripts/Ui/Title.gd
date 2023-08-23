@@ -1,8 +1,5 @@
 extends Control
 
-## func _ready():
-##	var audioTween = get_tree().create_tween()
-##	audioTween.tween_property($TitleMusic, "volume_db", 5, 5)
 
 func _on_texture_button_pressed():
 	# Show exposition
@@ -10,8 +7,6 @@ func _on_texture_button_pressed():
 
 
 func _on_button_pressed():
-##	var audioTween = get_tree().create_tween()
-##	audioTween.tween_property($TitleMusic, "volume_db", -15.0, 5)
 	$BlackRect.show()
 	var toBlackTween = get_tree().create_tween()
 	toBlackTween.tween_property($BlackRect, "color:a", 1.0, 5)

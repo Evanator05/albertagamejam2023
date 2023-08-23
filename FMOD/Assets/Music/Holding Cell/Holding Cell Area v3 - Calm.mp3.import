@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dl5tnscpb0rgg"
+path="res://.godot/imported/Holding Cell Area v3 - Calm.mp3-4e97c40f1150f02172990ecb2193a575.mp3str"
+
+[deps]
+
+source_file="res://FMOD/Assets/Music/Holding Cell/Holding Cell Area v3 - Calm.mp3"
+dest_files=["res://.godot/imported/Holding Cell Area v3 - Calm.mp3-4e97c40f1150f02172990ecb2193a575.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

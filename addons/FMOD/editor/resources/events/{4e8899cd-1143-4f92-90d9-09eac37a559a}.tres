@@ -1,0 +1,10 @@
+[gd_resource type="EventAsset" format=3 uid="uid://dw1yqxr2o8rr8"]
+
+[resource]
+is_3d = true
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Tranq Gun SFX v2"
+guid = "{4e8899cd-1143-4f92-90d9-09eac37a559a}"
+name = "Tranq Gun SFX v2"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="BankFolder" id="{92c736f9-c466-45bb-9964-83ca4138a446}">
+	<object class="Bank" id="{1c4157e8-fcc8-4db7-aa3f-b60302a2f85f}">
 		<property name="name">
 			<value>SFX</value>
 		</property>

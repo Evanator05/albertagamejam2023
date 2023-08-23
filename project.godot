@@ -55,7 +55,6 @@ settings/encryption_key=""
 settings/distance_scale_2d=1.0
 settings/init_with_3d_righthanded=true
 settings/fmod_debug_flags=3
-settings/banks_to_load_at_startup=Array[String](["res://FMOD/Build/Desktop/Title Screen.bank"])
 
 [input]
 
