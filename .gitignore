@@ -15,7 +15,6 @@
 .mono/
 data_*/
 mono_crash.*.json
-# -----------------
 
 # Suggested by Hugh
 .DS_Store
@@ -26,3 +25,5 @@ addons/FMOD/editor/cache/
 FMOD/.user/
 FMOD/.cache/
 FMOD/.unsaved/
+
+.vscode/settings.json
