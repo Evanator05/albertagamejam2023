@@ -22,4 +22,7 @@ mono_crash.*.json
 
 # FMOD
 addons/FMOD/editor/cache/
-!addons/FMOD/editor/resources
+!addons/FMOD/editor/resources/
+FMOD/.user/
+FMOD/.cached/
+FMOD/.unsaved/
