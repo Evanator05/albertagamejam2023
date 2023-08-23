@@ -7,7 +7,6 @@ const SPEED = 15.0
 @onready var particles = $GPUParticles3D
 
 func _process(delta):
-	
 	ray.force_raycast_update()
 	if ray.is_colliding():
 		global_transform.origin = ray.get_collision_point()

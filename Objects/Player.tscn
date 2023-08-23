@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_7jwfk"]
 [ext_resource type="Texture2D" uid="uid://efkuxns0xqkx" path="res://Textures/player.png" id="2_jfjno"]
-[ext_resource type="PackedScene" uid="uid://bpodwf3jw3xts" path="res://Scenes/Gun.tscn" id="2_k5qpc"]
+[ext_resource type="PackedScene" uid="uid://bpodwf3jw3xts" path="res://Objects/Gun.tscn" id="2_k5qpc"]
 [ext_resource type="PackedScene" uid="uid://bnv56a2ieppv7" path="res://Inventory/ui.tscn" id="4_ra060"]
-[ext_resource type="AudioStream" uid="uid://cv5hr4lcfsu3l" path="res://Audio/Footstep SFX.wav" id="5_oxfvw"]
-[ext_resource type="AudioStream" uid="uid://dww2b8jqakf8g" path="res://Audio/Tranq Gun SFX v2.wav" id="6_kyqx3"]
+[ext_resource type="AudioStream" uid="uid://d2e76bnh5e7hb" path="res://Audio/Footstep SFX.wav" id="5_oxfvw"]
+[ext_resource type="AudioStream" uid="uid://fpp4p3aqkc7d" path="res://Audio/Tranq Gun SFX v2.wav" id="6_kyqx3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6cjka"]
 

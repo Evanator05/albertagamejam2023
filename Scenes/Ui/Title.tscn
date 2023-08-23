@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://bi3mac4aqpu4n"]
 
-[ext_resource type="Script" path="res://Scenes/Title.gd" id="1_m6rwx"]
-[ext_resource type="Texture2D" uid="uid://du31ku7lfm6kn" path="res://Textures/start.png" id="2_d5w48"]
-[ext_resource type="Texture2D" uid="uid://sg68u83vfl5e" path="res://Textures/background.png" id="2_g0o6k"]
-[ext_resource type="Texture2D" uid="uid://be4qbg3jaijko" path="res://Textures/start_clicked.png" id="3_1vnxv"]
-[ext_resource type="AudioStream" uid="uid://dutb7t4431yxx" path="res://Audio/Music/Title Screen_easy loopable.mp3" id="5_ys5yg"]
+[ext_resource type="Script" path="res://Scripts/Ui/Title.gd" id="1_itf81"]
+[ext_resource type="Texture2D" uid="uid://sg68u83vfl5e" path="res://Textures/background.png" id="2_bnwam"]
+[ext_resource type="Texture2D" uid="uid://du31ku7lfm6kn" path="res://Textures/start.png" id="3_rubr3"]
+[ext_resource type="Texture2D" uid="uid://be4qbg3jaijko" path="res://Textures/start_clicked.png" id="4_7lo1s"]
+[ext_resource type="AudioStream" uid="uid://dutb7t4431yxx" path="res://Audio/Music/Title Screen_easy loopable.mp3" id="5_vcesk"]
 
 [sub_resource type="Theme" id="Theme_iw7e8"]
 default_font_size = 24
@@ -16,7 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_m6rwx")
+script = ExtResource("1_itf81")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -25,7 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_g0o6k")
+texture = ExtResource("2_bnwam")
 expand_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="."]
@@ -41,8 +41,8 @@ offset_right = -48.0
 offset_bottom = -36.0
 grow_horizontal = 0
 grow_vertical = 0
-texture_normal = ExtResource("2_d5w48")
-texture_hover = ExtResource("3_1vnxv")
+texture_normal = ExtResource("3_rubr3")
+texture_hover = ExtResource("4_7lo1s")
 
 [node name="Intro" type="ColorRect" parent="."]
 visible = false
@@ -96,7 +96,7 @@ grow_vertical = 0
 text = "Kick Butt"
 
 [node name="TitleMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_ys5yg")
+stream = ExtResource("5_vcesk")
 volume_db = -15.0
 autoplay = true
 

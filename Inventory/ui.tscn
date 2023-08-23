@@ -1,13 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnv56a2ieppv7"]
+[gd_scene load_steps=3 format=3 uid="uid://bnv56a2ieppv7"]
 
-[ext_resource type="Script" path="res://Scenes/UI.gd" id="1_tp7bv"]
-[ext_resource type="Script" path="res://Scenes/InvContainer.gd" id="2_vitgr"]
-[ext_resource type="Texture2D" uid="uid://noo7mxapx8l1" path="res://Inventory/cloak.png" id="3_etf4p"]
-[ext_resource type="Texture2D" uid="uid://ciuvxeypqsho4" path="res://Inventory/hackdevice.png" id="4_xct3j"]
+[ext_resource type="Script" path="res://Scripts/Ui/UI.gd" id="1_og4ha"]
 [ext_resource type="Texture2D" uid="uid://bqsc4tp8fwwu1" path="res://Inventory/stungun.png" id="5_ydlep"]
 
 [node name="UI" type="CanvasLayer"]
-script = ExtResource("1_tp7bv")
+script = ExtResource("1_og4ha")
 
 [node name="Inventory" type="Control" parent="."]
 layout_mode = 3
@@ -16,62 +13,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="InvContainer" type="GridContainer" parent="Inventory"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/v_separation = 10
-script = ExtResource("2_vitgr")
-
-[node name="Cloak" type="TextureRect" parent="Inventory/InvContainer"]
-visible = false
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-texture = ExtResource("3_etf4p")
-expand_mode = 3
-
-[node name="0" type="Label" parent="Inventory/InvContainer/Cloak"]
-visible = false
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -40.0
-offset_top = -26.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "0
-"
-horizontal_alignment = 2
-
-[node name="Hack" type="TextureRect" parent="Inventory/InvContainer"]
-visible = false
-custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
-texture = ExtResource("4_xct3j")
-expand_mode = 3
-
-[node name="0" type="Label" parent="Inventory/InvContainer/Hack"]
-visible = false
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -40.0
-offset_top = -26.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "0
-"
-horizontal_alignment = 2
 
 [node name="Gun" type="TextureRect" parent="Inventory"]
 custom_minimum_size = Vector2(64, 64)

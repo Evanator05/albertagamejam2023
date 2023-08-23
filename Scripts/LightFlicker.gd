@@ -5,12 +5,10 @@ var timer = null
 func _ready():
 	super._ready()
 	randomize()
-	timer = Timer.new()
-	timer.wait_time = randf_range(0.8, 0.1)
-	timer.connect("timeout", Callable(self, "on_timer_timeout"))
-	add_child(timer)
-	timer.start()
+	timer = get_tree().create_timer(randf_range(0.8, 0.1))
+	timer.timeout.connect(on_timer_timeout)
 
 func on_timer_timeout():
-	timer.wait_time = randf_range(0.5,0.1)
+	timer = get_tree().create_timer(randf_range(0.8, 0.1))
+	timer.timeout.connect(on_timer_timeout)
 	light_energy = randf_range(0.0, 1.0)

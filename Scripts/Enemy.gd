@@ -21,7 +21,7 @@ var state = PATROL
 enum {PATROL, ALERT}
 
 @export var damage = 1
-@export var health = 1
+
 signal body_part_hit(dam)
 
 func _ready():
@@ -50,7 +50,7 @@ func _process(delta):
 
 func setTarget(t:Node3D):
 	target = t
-	var targetPos:Vector3 = target.global_transform.origin
+	var targetPos:Vector3 = t.global_transform.origin
 	navAgent.set_target_position(targetPos)
 
 func getNextPoint():
@@ -88,17 +88,14 @@ func _on_die_area_body_entered(body):
 func hit():
 	emit_signal("body_part_hit", damage)
 
-func _on_body_part_hit(dam):
-	health -= dam
-	#var moveDir:Vector3 = nextPoint-global_transform.origin
-	if health <= 0:
-		speed = 0
-		Globals.activeGuards -= 1
-		$die/CollisionShape3D.disabled = true
-		get_tree().create_timer(5.0).timeout.connect(func(): 
-			speed = 6
-			$die/CollisionShape3D.disabled = false
-			state = PATROL
-			)
-		move_and_slide()
+func _on_body_part_hit(_dam):
+	speed = 0
+	Globals.activeGuards -= 1
+	$die/CollisionShape3D.disabled = true
+	get_tree().create_timer(5.0).timeout.connect(func(): 
+		speed = 6
+		$die/CollisionShape3D.disabled = false
+		state = PATROL
+		)
+	move_and_slide()
 		
