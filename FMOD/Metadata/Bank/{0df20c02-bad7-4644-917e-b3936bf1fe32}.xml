@@ -5,7 +5,7 @@
 			<value>Title Screen</value>
 		</property>
 		<relationship name="folder">
-			<destination>{b9f1a299-d19d-4f7d-b2f9-cd8f0bbdaf96}</destination>
+			<destination>{92afc855-1cea-4642-8799-868599c25d40}</destination>
 		</relationship>
 	</object>
 </objects>

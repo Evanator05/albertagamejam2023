@@ -1,0 +1,8 @@
+[gd_resource type="BankAsset" format=3 uid="uid://d1hffoaduk305"]
+
+[resource]
+file_path = "res://FMOD/Build/Desktop/Elevator.bank"
+modified_time = 1692774233
+path = "bank:/Scenes/Elevator"
+guid = "{8a53844d-3e07-4dee-9e6d-077e9e69d0bc}"
+name = "Elevator"

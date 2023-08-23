@@ -1,0 +1,8 @@
+[gd_resource type="BankAsset" format=3 uid="uid://drtwx3sv4ljto"]
+
+[resource]
+file_path = "res://FMOD/Build/Desktop/SFX.bank"
+modified_time = 1692774233
+path = "bank:/SFX"
+guid = "{a3412a5a-7eb1-4763-a5d1-dee12e2bcc54}"
+name = "SFX"

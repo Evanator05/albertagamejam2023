@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://by10jpis8lgum"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Footstep"
+guid = "{f887fe44-b63b-4a93-be74-55ff758259d2}"
+name = "Footstep"

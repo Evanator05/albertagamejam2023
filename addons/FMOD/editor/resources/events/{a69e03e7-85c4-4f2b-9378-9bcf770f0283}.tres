@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://yodp48tyayr6"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Music/Elevator"
+guid = "{a69e03e7-85c4-4f2b-9378-9bcf770f0283}"
+name = "Elevator"

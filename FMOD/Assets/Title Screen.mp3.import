@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cuntr50aq0t34"
+path="res://.godot/imported/Title Screen.mp3-271eae9fe8d7a2b2cf1a940386176981.mp3str"
+
+[deps]
+
+source_file="res://FMOD/Assets/Title Screen.mp3"
+dest_files=["res://.godot/imported/Title Screen.mp3-271eae9fe8d7a2b2cf1a940386176981.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

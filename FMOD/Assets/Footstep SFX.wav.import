@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cui05w22j2bts"
+path="res://.godot/imported/Footstep SFX.wav-af2f34a6bbff629331443a4ac681cd85.sample"
+
+[deps]
+
+source_file="res://FMOD/Assets/Footstep SFX.wav"
+dest_files=["res://.godot/imported/Footstep SFX.wav-af2f34a6bbff629331443a4ac681cd85.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

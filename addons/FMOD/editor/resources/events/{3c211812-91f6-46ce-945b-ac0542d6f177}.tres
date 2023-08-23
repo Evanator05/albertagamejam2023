@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://biyuely54a2a8"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/Music/Credits"
+guid = "{3c211812-91f6-46ce-945b-ac0542d6f177}"
+name = "Credits"

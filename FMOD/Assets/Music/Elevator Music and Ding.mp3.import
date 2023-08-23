@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfg5ultddj1x7"
+path="res://.godot/imported/Elevator Music and Ding.mp3-d384690ece2d9622bcad43be85bbc2b2.mp3str"
+
+[deps]
+
+source_file="res://FMOD/Assets/Music/Elevator Music and Ding.mp3"
+dest_files=["res://.godot/imported/Elevator Music and Ding.mp3-d384690ece2d9622bcad43be85bbc2b2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
