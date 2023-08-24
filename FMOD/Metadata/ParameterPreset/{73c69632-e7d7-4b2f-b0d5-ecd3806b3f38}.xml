@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{73c69632-e7d7-4b2f-b0d5-ecd3806b3f38}">
+		<property name="name">
+			<value>audioTween</value>
+		</property>
+		<relationship name="folder">
+			<destination>{9b1f5453-4619-433e-ab1c-766b513a97de}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{043ffc56-baed-4ee2-9964-6d2fe20ff0f1}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{043ffc56-baed-4ee2-9964-6d2fe20ff0f1}">
+		<property name="maximum">
+			<value>100</value>
+		</property>
+		<property name="initialValue">
+			<value>100</value>
+		</property>
+	</object>
+</objects>
