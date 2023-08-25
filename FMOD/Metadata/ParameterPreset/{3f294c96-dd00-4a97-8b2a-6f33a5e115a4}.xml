@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="ParameterPreset" id="{3f294c96-dd00-4a97-8b2a-6f33a5e115a4}">
 		<property name="name">
-			<value>SpottedByGuard</value>
+			<value>activeGuards</value>
 		</property>
 		<relationship name="folder">
 			<destination>{9b1f5453-4619-433e-ab1c-766b513a97de}</destination>

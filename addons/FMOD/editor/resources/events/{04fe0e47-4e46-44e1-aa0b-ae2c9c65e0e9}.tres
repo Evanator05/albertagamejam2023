@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://c1v221t4bx2ac"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Helicoptor SFX"
+guid = "{04fe0e47-4e46-44e1-aa0b-ae2c9c65e0e9}"
+name = "Helicoptor SFX"

@@ -33,6 +33,7 @@
 		</relationship>
 		<relationship name="banks">
 			<destination>{0df20c02-bad7-4644-917e-b3936bf1fe32}</destination>
+			<destination>{2c04129c-0190-4ea3-80dc-f2964deec5e5}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{37e8d6c2-7dd2-45ad-af4b-a8e8d561707d}">
@@ -59,9 +60,6 @@
 	<object class="EventAutomatableProperties" id="{234c5b20-3544-4724-a0b2-a17e2c6303a5}" />
 	<object class="MarkerTrack" id="{037eed92-8bc3-45f6-90f5-41ec07cdae61}" />
 	<object class="GroupTrack" id="{304d9b98-ce8d-4e3c-b913-c3948f21a0cc}">
-		<relationship name="automationTracks">
-			<destination>{49507bc8-8ab3-42fc-a75b-4d85b82e14a0}</destination>
-		</relationship>
 		<relationship name="modules">
 			<destination>{79a1436b-5c92-483c-a81b-1d20e36e02c6}</destination>
 		</relationship>
@@ -95,11 +93,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2e07f4a1-6607-4593-92bd-e55f43ccfb43}" />
-	<object class="AutomationTrack" id="{49507bc8-8ab3-42fc-a75b-4d85b82e14a0}">
-		<relationship name="automator">
-			<destination>{b9dd1b00-6440-4124-a80e-9ef3ce492619}</destination>
-		</relationship>
-	</object>
 	<object class="SingleSound" id="{79a1436b-5c92-483c-a81b-1d20e36e02c6}">
 		<property name="length">
 			<value>67.056326530612239</value>
@@ -115,9 +108,6 @@
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
-		<relationship name="automators">
-			<destination>{b9dd1b00-6440-4124-a80e-9ef3ce492619}</destination>
-		</relationship>
 		<relationship name="modulators">
 			<destination>{9ca343dd-3378-4140-b9bb-7b83a74b0a12}</destination>
 		</relationship>
@@ -174,11 +164,6 @@
 			<destination>{4cec6c19-46e9-433b-93b3-1892f08bb782}</destination>
 		</relationship>
 	</object>
-	<object class="Automator" id="{b9dd1b00-6440-4124-a80e-9ef3ce492619}">
-		<property name="nameOfPropertyBeingAutomated">
-			<value>volume</value>
-		</property>
-	</object>
 	<object class="ADSRModulator" id="{9ca343dd-3378-4140-b9bb-7b83a74b0a12}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>volume</value>
@@ -222,7 +207,7 @@
 	</object>
 	<object class="AutomationPoint" id="{4cec6c19-46e9-433b-93b3-1892f08bb782}">
 		<property name="position">
-			<value>0.66666666666666663</value>
+			<value>1.3333333333333333</value>
 		</property>
 		<property name="value">
 			<value>1</value>

@@ -1,9 +1,28 @@
-[gd_resource type="EventAsset" format=3 uid="uid://bdpv4asnsa8tt"]
+[gd_resource type="EventAsset" load_steps=4 format=3 uid="uid://bdpv4asnsa8tt"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_otwid"]
+data1 = 3052711979
+data2 = 3426375528
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_y1vev"]
+name = "audioTween"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_otwid")
+maximum = 60.0
+guid = "{043ffc56-baed-4ee2-9964-6d2fe20ff0f1}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_1eq6m"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_y1vev")
+path = "parameter:/audioTween"
+guid = "{043ffc56-baed-4ee2-9964-6d2fe20ff0f1}"
+name = "audioTween"
 
 [resource]
 is_oneshot = true
 min_distance = 1.0
 max_distance = 20.0
+parameters = {
+"{043ffc56-baed-4ee2-9964-6d2fe20ff0f1}": SubResource("ParameterAsset_1eq6m")
+}
 path = "event:/Music/Credits"
 guid = "{e649ff65-4db9-4172-8188-346aa7afdecd}"
 name = "Credits"

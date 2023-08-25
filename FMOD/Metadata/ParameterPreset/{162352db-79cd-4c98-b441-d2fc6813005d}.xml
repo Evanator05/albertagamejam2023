@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="ParameterPreset" id="{162352db-79cd-4c98-b441-d2fc6813005d}">
 		<property name="name">
-			<value>SpottedByGuardSlider</value>
+			<value>activeGuards_Slider</value>
 		</property>
 		<relationship name="folder">
 			<destination>{9b1f5453-4619-433e-ab1c-766b513a97de}</destination>

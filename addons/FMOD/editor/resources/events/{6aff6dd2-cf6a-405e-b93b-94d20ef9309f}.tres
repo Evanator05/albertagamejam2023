@@ -1,0 +1,31 @@
+[gd_resource type="EventAsset" load_steps=4 format=3 uid="uid://7yckae5jimyt"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_rqvb5"]
+data1 = 1529810595
+data2 = 2309646898
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_40i25"]
+name = "DoorStatus"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_rqvb5")
+maximum = 1.0
+flags = 24
+guid = "{326f8c0d-fcd3-4f74-8c01-e98828c4d346}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_yj11r"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_40i25")
+labels = ["Close", "Open"]
+path = "parameter:/DoorStatus"
+guid = "{326f8c0d-fcd3-4f74-8c01-e98828c4d346}"
+name = "DoorStatus"
+
+[resource]
+is_3d = true
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{326f8c0d-fcd3-4f74-8c01-e98828c4d346}": SubResource("ParameterAsset_yj11r")
+}
+path = "event:/SFX/Door SFX"
+guid = "{6aff6dd2-cf6a-405e-b93b-94d20ef9309f}"
+name = "Door SFX"

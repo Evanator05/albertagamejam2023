@@ -1,8 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://4bhkhqjr3j2x"]
+[gd_scene load_steps=11 format=3 uid="uid://4bhkhqjr3j2x"]
 
 [ext_resource type="Script" path="res://Scripts/Ui/End.gd" id="1_t8say"]
 [ext_resource type="Texture2D" uid="uid://fdaiu8f207sy" path="res://Textures/endsplash.png" id="2_14hhg"]
-[ext_resource type="AudioStream" uid="uid://by4syxgh11p83" path="res://Audio/Music/Credits.mp3" id="3_ohlqu"]
+[ext_resource type="BankAsset" uid="uid://csodpa36sdjpd" path="res://addons/FMOD/editor/resources/banks/{a217c6b6-156e-4ee6-9b1d-9da58afd0fde}.tres" id="4_42lu8"]
+[ext_resource type="BankAsset" uid="uid://37h1v2wmhhvs" path="res://addons/FMOD/editor/resources/banks/{f93d27d8-c724-4ab3-8e95-d1b29ddf5674}.tres" id="4_uy141"]
+[ext_resource type="EventAsset" uid="uid://bdpv4asnsa8tt" path="res://addons/FMOD/editor/resources/events/{e649ff65-4db9-4172-8188-346aa7afdecd}.tres" id="5_80iw2"]
+[ext_resource type="BankAsset" uid="uid://cg6xg5lu1rf3h" path="res://addons/FMOD/editor/resources/banks/{6120070c-b65f-06f1-08dc-5b4c6c2c50ec}.tres" id="5_smsad"]
 
 [sub_resource type="Theme" id="Theme_drsbp"]
 default_font_size = 30
@@ -93,10 +96,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="EndMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_ohlqu")
-autoplay = true
-
 [node name="Credits" type="Label" parent="."]
 visible = false
 layout_mode = 1
@@ -143,6 +142,22 @@ grow_horizontal = 2
 grow_vertical = 0
 theme = SubResource("Theme_e6nts")
 text = "Quit"
+
+[node name="MasterBankLoader" type="StudioBankLoader" parent="."]
+load_on = 1
+unload_on = 3
+num_banks = 2
+bank_0 = ExtResource("4_uy141")
+bank_1 = ExtResource("5_smsad")
+
+[node name="CreditsBankLoader" type="StudioBankLoader" parent="."]
+load_on = 1
+unload_on = 3
+num_banks = 1
+bank_0 = ExtResource("4_42lu8")
+
+[node name="CreditsEventEmitter2D" type="StudioEventEmitter2D" parent="."]
+event = ExtResource("5_80iw2")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="TitleButton" to="." method="_on_title_button_pressed"]

@@ -27,4 +27,4 @@ FMOD/.user/
 FMOD/.cache/
 FMOD/.unsaved/
 
-.vscode/
+.vs/*
