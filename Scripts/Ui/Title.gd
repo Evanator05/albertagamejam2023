@@ -10,6 +10,6 @@ func _on_button_pressed():
 	$BlackRect.show()
 	var toBlackTween = get_tree().create_tween()
 	toBlackTween.tween_property($BlackRect, "color:a", 1.0, 5)
-	$TitleEventEmitter2D.stop()
+	$TitleEventEmitter2D.stop() #Release value set to 5s in FMOD
 	await toBlackTween.finished
 	get_tree().change_scene_to_file("res://Scenes/Game.tscn")

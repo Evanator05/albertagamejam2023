@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/Door.gd" id="1_vjq12"]
 [ext_resource type="Texture2D" uid="uid://bl6cgnpa5d3wg" path="res://Textures/Outer walls texture ( basic ).png" id="2_qu5rd"]
-[ext_resource type="AudioStream" uid="uid://dcevgqr1m3w5f" path="res://Audio/Door SFX.wav" id="3_p7n5t"]
-[ext_resource type="AudioStream" uid="uid://cgqw0hyfwd7k4" path="res://Audio/Door Close SFX.wav" id="4_43lbq"]
+[ext_resource type="EventAsset" uid="uid://0louxoq17g1i" path="res://addons/FMOD/editor/resources/events/{1154c87d-80a6-42b8-bac4-d6a7465069ce}.tres" id="5_fwm81"]
+[ext_resource type="EventAsset" uid="uid://ckddehcrsjc5w" path="res://addons/FMOD/editor/resources/events/{f0596747-6524-4192-8a1f-5f0726920b6c}.tres" id="6_u5sgh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dn8if"]
 albedo_texture = ExtResource("2_qu5rd")
@@ -32,8 +32,11 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 shape = SubResource("BoxShape3D_idoms")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("3_p7n5t")
+[node name="DoorOpenEventEmitter3D" type="StudioEventEmitter3D" parent="." node_paths=PackedStringArray("rigidbody")]
+event = ExtResource("5_fwm81")
+preload_samples = true
+rigidbody = NodePath("../StaticBody3D")
 
-[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("4_43lbq")
+[node name="DoorCloseEventEmitter3D" type="StudioEventEmitter3D" parent="." node_paths=PackedStringArray("rigidbody")]
+event = ExtResource("6_u5sgh")
+rigidbody = NodePath("../StaticBody3D")

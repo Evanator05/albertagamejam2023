@@ -1,15 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://c64dh7tmfq26l"]
+[gd_scene load_steps=9 format=3 uid="uid://c64dh7tmfq26l"]
 
 [ext_resource type="PackedScene" uid="uid://dpikd35h2mjce" path="res://Objects/Player.tscn" id="1_7vwb5"]
 [ext_resource type="Script" path="res://Scripts/MapSections.gd" id="1_u3s5k"]
 [ext_resource type="PackedScene" uid="uid://ccoersjsjhk7s" path="res://Objects/Camera.tscn" id="2_epy8b"]
 [ext_resource type="PackedScene" uid="uid://cvmtp14hj0n8j" path="res://Objects/MusicManager.tscn" id="4_3fxqc"]
-[ext_resource type="BankAsset" uid="uid://37h1v2wmhhvs" path="res://addons/FMOD/editor/resources/banks/{f93d27d8-c724-4ab3-8e95-d1b29ddf5674}.tres" id="5_1ixfg"]
-[ext_resource type="BankAsset" uid="uid://cg6xg5lu1rf3h" path="res://addons/FMOD/editor/resources/banks/{6120070c-b65f-06f1-08dc-5b4c6c2c50ec}.tres" id="6_7bfup"]
 [ext_resource type="BankAsset" uid="uid://d3b58u1386shs" path="res://addons/FMOD/editor/resources/banks/{fb26766d-22ea-400b-bdef-558c4351adf1}.tres" id="7_gsjl8"]
 [ext_resource type="BankAsset" uid="uid://dnjih33hiuju2" path="res://addons/FMOD/editor/resources/banks/{1c4157e8-fcc8-4db7-aa3f-b60302a2f85f}.tres" id="8_mecwf"]
-[ext_resource type="EventAsset" uid="uid://dw1yqxr2o8rr8" path="res://addons/FMOD/editor/resources/events/{4e8899cd-1143-4f92-90d9-09eac37a559a}.tres" id="9_itclr"]
-[ext_resource type="EventAsset" uid="uid://7yckae5jimyt" path="res://addons/FMOD/editor/resources/events/{6aff6dd2-cf6a-405e-b93b-94d20ef9309f}.tres" id="10_ihg4w"]
+[ext_resource type="EventAsset" uid="uid://ckb405cy6lx7l" path="res://addons/FMOD/editor/resources/events/{21c7de01-0f18-4b7b-9e82-950d2b9ed233}.tres" id="9_omve3"]
+[ext_resource type="EventAsset" uid="uid://cx20w7djnhcxf" path="res://addons/FMOD/editor/resources/events/{182ce1a9-412c-44d2-b4bd-8b131cace5d6}.tres" id="10_4ldev"]
 
 [node name="Game" type="Node3D"]
 
@@ -24,24 +22,17 @@ camera = NodePath("../Camera3D")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 track = NodePath("../Player")
 
-[node name="MusicManager" parent="." instance=ExtResource("4_3fxqc")]
-
-[node name="StudioBankLoader" type="StudioBankLoader" parent="MusicManager"]
+[node name="StudioBankLoader" type="StudioBankLoader" parent="."]
 load_on = 1
 unload_on = 3
-num_banks = 4
-bank_0 = ExtResource("5_1ixfg")
-bank_1 = ExtResource("6_7bfup")
-bank_2 = ExtResource("7_gsjl8")
-bank_3 = ExtResource("8_mecwf")
+num_banks = 2
+bank_0 = ExtResource("7_gsjl8")
+bank_1 = ExtResource("8_mecwf")
 
-[node name="TranqGunSFXEventEmitter3D" type="StudioEventEmitter3D" parent="MusicManager"]
-event = ExtResource("9_itclr")
+[node name="FootstepsSFXEventEmitter3D" type="StudioEventEmitter3D" parent="."]
+event = ExtResource("9_omve3")
 
-[node name="DoorSFXEventEmitter3D" type="StudioEventEmitter3D" parent="MusicManager"]
-play_event = 2
-event = ExtResource("10_ihg4w")
-
-[node name="FootstepsSFXEventEmitter3D" type="StudioEventEmitter3D" parent="MusicManager"]
+[node name="MusicManager" parent="." instance=ExtResource("4_3fxqc")]
 
 [node name="HoldingCellMusicEventEmitter2D" type="StudioEventEmitter2D" parent="MusicManager"]
+event = ExtResource("10_4ldev")

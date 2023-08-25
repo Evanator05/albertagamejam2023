@@ -12,7 +12,7 @@ var sections = [
 var currentMap
 var respawnPoint:Vector3
 var firstMap = true
-var currentLevel = 0
+var currentLevel = 6
 
 func _ready():
 	Globals.mapSections = self
