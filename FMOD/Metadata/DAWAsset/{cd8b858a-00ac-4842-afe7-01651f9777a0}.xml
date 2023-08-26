@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DAWAsset" id="{cd8b858a-00ac-4842-afe7-01651f9777a0}">
+		<property name="assetPath">
+			<value>Tranq Gun Sound.rpp.link/02-230825_1300.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.1792291666666668</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f70bfb6d-4a09-4139-a4db-e67313e50c1a}</destination>
+		</relationship>
+		<relationship name="project">
+			<destination>{442e46e3-20e0-417f-b416-77583caf353a}</destination>
+		</relationship>
+	</object>
+</objects>

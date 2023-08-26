@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bno2pdtv24piv"
+path="res://.godot/imported/01-230825_1239.wav-1370306649c3464dcf00fa8f98809626.sample"
+
+[deps]
+
+source_file="res://FMOD/Assets/Tranq Gun Sound.rpp.link/01-230825_1239.wav"
+dest_files=["res://.godot/imported/01-230825_1239.wav-1370306649c3464dcf00fa8f98809626.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
