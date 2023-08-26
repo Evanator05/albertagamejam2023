@@ -1,18 +1,18 @@
 [gd_resource type="ParameterAsset" load_steps=3 format=3 uid="uid://cwu84hogwhlba"]
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_tfjac"]
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_vt5jg"]
 data1 = 3270065539
 data2 = 3571861006
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_f6ufm"]
-name = "pG­û"
-id = SubResource("FMOD_STUDIO_PARAMETER_ID_tfjac")
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_dtepx"]
+name = "activeGuards"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_vt5jg")
 maximum = 1.0
 flags = 12
 guid = "{08ecbac0-51b8-413e-b7d4-5b967d7abf8a}"
 
 [resource]
-parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_f6ufm")
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_dtepx")
 path = "parameter:/activeGuards"
 guid = "{08ecbac0-51b8-413e-b7d4-5b967d7abf8a}"
 name = "activeGuards"

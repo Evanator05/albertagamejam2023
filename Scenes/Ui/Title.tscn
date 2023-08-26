@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://sg68u83vfl5e" path="res://Textures/background.png" id="2_bnwam"]
 [ext_resource type="Texture2D" uid="uid://du31ku7lfm6kn" path="res://Textures/start.png" id="3_rubr3"]
 [ext_resource type="Texture2D" uid="uid://be4qbg3jaijko" path="res://Textures/start_clicked.png" id="4_7lo1s"]
-[ext_resource type="BankAsset" uid="uid://37h1v2wmhhvs" path="res://addons/FMOD/editor/resources/banks/{f93d27d8-c724-4ab3-8e95-d1b29ddf5674}.tres" id="6_afj27"]
-[ext_resource type="BankAsset" uid="uid://caa1cjsjnmqbe" path="res://addons/FMOD/editor/resources/banks/{0df20c02-bad7-4644-917e-b3936bf1fe32}.tres" id="7_fat2p"]
-[ext_resource type="EventAsset" uid="uid://c2cgpe26eeob3" path="res://addons/FMOD/editor/resources/events/{9318af8b-cd8d-4c71-bed1-ab24aafd2753}.tres" id="7_ghavo"]
-[ext_resource type="BankAsset" uid="uid://cg6xg5lu1rf3h" path="res://addons/FMOD/editor/resources/banks/{6120070c-b65f-06f1-08dc-5b4c6c2c50ec}.tres" id="7_koq5f"]
+[ext_resource type="BankAsset" uid="uid://37h1v2wmhhvs" path="res://addons/FMOD/editor/resources/banks/{f93d27d8-c724-4ab3-8e95-d1b29ddf5674}.tres" id="5_egrq6"]
+[ext_resource type="BankAsset" uid="uid://cg6xg5lu1rf3h" path="res://addons/FMOD/editor/resources/banks/{6120070c-b65f-06f1-08dc-5b4c6c2c50ec}.tres" id="6_520vg"]
+[ext_resource type="BankAsset" uid="uid://caa1cjsjnmqbe" path="res://addons/FMOD/editor/resources/banks/{0df20c02-bad7-4644-917e-b3936bf1fe32}.tres" id="7_5yrf8"]
+[ext_resource type="EventAsset" uid="uid://c2cgpe26eeob3" path="res://addons/FMOD/editor/resources/events/{9318af8b-cd8d-4c71-bed1-ab24aafd2753}.tres" id="8_ghfmm"]
 
 [sub_resource type="Theme" id="Theme_iw7e8"]
 default_font_size = 24
@@ -111,19 +111,19 @@ color = Color(0, 0, 0, 0)
 [node name="MasterBankLoader" type="StudioBankLoader" parent="."]
 load_on = 1
 num_banks = 2
-bank_0 = ExtResource("6_afj27")
-bank_1 = ExtResource("7_koq5f")
+bank_0 = ExtResource("5_egrq6")
+bank_1 = ExtResource("6_520vg")
 
 [node name="TitleBankLoader" type="StudioBankLoader" parent="."]
 load_on = 1
 unload_on = 3
 num_banks = 1
-bank_0 = ExtResource("7_fat2p")
+bank_0 = ExtResource("7_5yrf8")
 
 [node name="TitleEventEmitter2D" type="StudioEventEmitter2D" parent="."]
 play_event = 1
 stop_event = 3
-event = ExtResource("7_ghavo")
+event = ExtResource("8_ghfmm")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Intro/Label/Button" to="." method="_on_button_pressed"]

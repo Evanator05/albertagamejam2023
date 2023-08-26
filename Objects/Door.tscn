@@ -34,7 +34,6 @@ shape = SubResource("BoxShape3D_idoms")
 
 [node name="DoorOpenEventEmitter3D" type="StudioEventEmitter3D" parent="." node_paths=PackedStringArray("rigidbody")]
 event = ExtResource("5_fwm81")
-preload_samples = true
 rigidbody = NodePath("../StaticBody3D")
 
 [node name="DoorCloseEventEmitter3D" type="StudioEventEmitter3D" parent="." node_paths=PackedStringArray("rigidbody")]
