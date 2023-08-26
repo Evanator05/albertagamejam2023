@@ -1,18 +1,18 @@
 [gd_resource type="ParameterAsset" load_steps=3 format=3 uid="uid://c8fcvlf3l0cyi"]
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_a0axs"]
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_l6fs3"]
 data1 = 2420208851
 data2 = 2714179318
 
-[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_meoed"]
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_8slqp"]
 name = "activeGuards_Slider"
-id = SubResource("FMOD_STUDIO_PARAMETER_ID_a0axs")
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_l6fs3")
 maximum = 100.0
 flags = 5
 guid = "{858c139b-fa7b-402e-bbab-2b66d366627d}"
 
 [resource]
-parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_meoed")
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_8slqp")
 path = "parameter:/activeGuards_Slider"
 guid = "{858c139b-fa7b-402e-bbab-2b66d366627d}"
 name = "activeGuards_Slider"
