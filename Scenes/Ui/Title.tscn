@@ -125,7 +125,5 @@ play_event = 1
 stop_event = 3
 event = ExtResource("8_ghfmm")
 
-[node name="StudioListener2D" type="StudioListener2D" parent="."]
-
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Intro/Label/Button" to="." method="_on_button_pressed"]
